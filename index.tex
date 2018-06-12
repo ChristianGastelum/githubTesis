@@ -1,0 +1,252 @@
+% This is the Reed College LaTeX thesis template. Most of the work
+% for the document class was done by Sam Noble (SN), as well as this
+% template. Later comments etc. by Ben Salzberg (BTS). Additional
+% restructuring and APA support by Jess Youngberg (JY).
+% Your comments and suggestions are more than welcome; please email
+% them to cus@reed.edu
+%
+% See http://web.reed.edu/cis/help/latex.html for help. There are a
+% great bunch of help pages there, with notes on
+% getting started, bibtex, etc. Go there and read it if you're not
+% already familiar with LaTeX.
+%
+% Any line that starts with a percent symbol is a comment.
+% They won't show up in the document, and are useful for notes
+% to yourself and explaining commands.
+% Commenting also removes a line from the document;
+% very handy for troubleshooting problems. -BTS
+
+% As far as I know, this follows the requirements laid out in
+% the 2002-2003 Senior Handbook. Ask a librarian to check the
+% document before binding. -SN
+
+%%
+%% Preamble
+%%
+% \documentclass{<something>} must begin each LaTeX document
+\documentclass[12pt,twoside]{reedthesis}
+% Packages are extensions to the basic LaTeX functions. Whatever you
+% want to typeset, there is probably a package out there for it.
+% Chemistry (chemtex), screenplays, you name it.
+% Check out CTAN to see: http://www.ctan.org/
+%%
+\usepackage{graphicx,latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{longtable,booktabs,setspace}
+\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage[hyphens]{url}
+% Added by CII
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{float}
+\floatplacement{figure}{H}
+% End of CII addition
+\usepackage{rotating}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+% Next line commented out by CII
+%%% \usepackage{natbib}
+% Comment out the natbib line above and uncomment the following two lines to use the new
+% biblatex-chicago style, for Chicago A. Also make some changes at the end where the
+% bibliography is included.
+%\usepackage{biblatex-chicago}
+%\bibliography{thesis}
+
+
+% Added by CII (Thanks, Hadley!)
+% Use ref for internal links
+\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+% End of CII addition
+
+% Added by CII
+\usepackage{caption}
+\captionsetup{width=5in}
+% End of CII addition
+
+% \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+
+% Syntax highlighting #22
+
+% To pass between YAML and LaTeX the dollar signs are added by CII
+\title{My Final College Paper}
+\author{Your R. Name}
+% The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
+\date{May 20xx}
+\division{Mathematics and Natural Sciences}
+\advisor{Advisor F. Name}
+\institution{Reed College}
+\degree{Bachelor of Arts}
+%If you have two advisors for some reason, you can use the following
+% Uncommented out by CII
+% End of CII addition
+
+%%% Remember to use the correct department!
+\department{Mathematics}
+% if you're writing a thesis in an interdisciplinary major,
+% uncomment the line below and change the text as appropriate.
+% check the Senior Handbook if unsure.
+%\thedivisionof{The Established Interdisciplinary Committee for}
+% if you want the approval page to say "Approved for the Committee",
+% uncomment the next line
+%\approvedforthe{Committee}
+
+% Added by CII
+%%% Copied from knitr
+%% maxwidth is the original width if it's less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\renewcommand{\contentsname}{Table of Contents}
+% End of CII addition
+
+\setlength{\parskip}{0pt}
+
+% Added by CII
+  %\setlength{\parskip}{\baselineskip}
+  \usepackage[parfill]{parskip}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\Acknowledgements{
+I want to thank a few people.
+}
+
+\Dedication{
+You can have a dedication here if you wish.
+}
+
+\Preface{
+This is an example of a thesis setup to use the reed thesis document
+class (for LaTeX) and the R bookdown package, in general.
+}
+
+\Abstract{
+The preface pretty much says it all.
+
+\par
+
+Second paragraph of abstract starts here.
+}
+
+% End of CII addition
+%%
+%% End Preamble
+%%
+%
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+
+% Everything below added by CII
+  \maketitle
+
+\frontmatter % this stuff will be roman-numbered
+\pagestyle{empty} % this removes page numbers from the frontmatter
+  \begin{acknowledgements}
+    I want to thank a few people.
+  \end{acknowledgements}
+  \begin{preface}
+    This is an example of a thesis setup to use the reed thesis document
+    class (for LaTeX) and the R bookdown package, in general.
+  \end{preface}
+  \hypersetup{linkcolor=black}
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+
+  \listoftables
+
+  \listoffigures
+  \begin{abstract}
+    The preface pretty much says it all.
+    
+    \par
+    
+    Second paragraph of abstract starts here.
+  \end{abstract}
+  \begin{dedication}
+    You can have a dedication here if you wish.
+  \end{dedication}
+\mainmatter % here the regular arabic numbering starts
+\pagestyle{fancyplain} % turns page numbering back on
+
+\hypertarget{introduction}{%
+\chapter*{Introduction}\label{introduction}}
+\addcontentsline{toc}{chapter}{Introduction}
+
+Welcome to the \emph{R Markdown} thesis template. This template is based
+on (and in many places copied directly from) the Reed College LaTeX
+template, but hopefully it will provide a nicer interface for those that
+have never used TeX or LaTeX before. Using \emph{R Markdown} will also
+allow you to easily keep track of your analyses in \textbf{R} chunks of
+code, with the resulting plots and output included as well. The hope is
+this \emph{R Markdown} template gets you in the habit of doing
+reproducible research, which benefits you long-term as a researcher, but
+also will greatly help anyone that is trying to reproduce or build onto
+your results down the road.
+
+Hopefully, you won't have much of a learning period to go through and
+you will reap the benefits of a nicely formatted thesis. The use of
+LaTeX in combination with \emph{Markdown} is more consistent than the
+output of a word processor, much less prone to corruption or crashing,
+and the resulting file is smaller than a Word file. While you may have
+never had problems using Word in the past, your thesis is likely going
+to be about twice as large and complex as anything you've written
+before, taxing Word's capabilities. After working with \emph{Markdown}
+and \textbf{R} together for a few weeks, we are confident this will be
+your reporting style of choice going forward.
+
+\textbf{Why use it?}
+
+\emph{R Markdown} creates a simple and straightforward way to interface
+with the beauty of LaTeX. Packages have been written in \textbf{R} to
+work directly with LaTeX to produce nicely formatting tables and
+paragraphs. In addition to creating a user friendly interface to LaTeX,
+\emph{R Markdown} also allows you to read in your data, to analyze it
+and to visualize it using \textbf{R} functions, and also to provide the
+documentation and commentary on the results of your project. Further, it
+allows for \textbf{R} results to be passed inline to the commentary of
+your results. You'll see more on this later.
+
+\textbf{Who should use it?}
+
+Anyone who needs to use data analysis, math, tables, a lot of figures,
+complex cross-references, or who just cares about the final appearance
+of their document should use \emph{R Markdown}. Of particular use should
+be anyone in the sciences, but the user-friendly nature of
+\emph{Markdown} and its ability to keep track of and easily include
+figures, automatically generate a table of contents, index, references,
+table of figures, etc. should make it of great benefit to nearly anyone
+writing a thesis project.
+
+
+% Index?
+
+\end{document}

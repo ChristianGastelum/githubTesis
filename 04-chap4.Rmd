@@ -1,0 +1,55 @@
+
+<!--
+You can delete the header-includes (lines 3-5 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap2.Rmd will compile by itself when you hit Knit PDF.
+
+-->
+# Modelacion utilizando diseño basado en dominios
+
+Utilizando el esquema de migración. El usuario debe contar con una cuenta en Openstack, en este proyecto se utilizaron los usuarios y contraseñas de fabrica. Se proveerá un *script*, el cual obtendrá información básica para crear una maquina virtual. Con esta información se crea un inventario donde el usuario puede seleccionar, eliminar equipo de computo. 0
+
+## Requisitos
+- Permita reconocer el equipo de computo en la red. 
+- Crear un inventario con el equipo de computo del usuario.
+  - Permita seleccionar cuales serán las computadoras para la migración.
+- Facilitar la creación de respaldos de disco duro 
+- Migración de los respaldos a la nube
+
+Las computadoras del usuario deberán tener lo siguiente:
+
+- *Windows* 7, 8.1 o 10 
+- *Powershell* 3.0 en adelante
+- *NET* 4.0 
+- *WinRM* deberá ser creado y activado.
+
+
+El modelo siempre debe ser construido teniendo en cuenta las consideraciones de diseño y software. Esto, con el propósito de diseñar un modelo, el cual pueda ser expresado apropiadamente en software. 
+
+Una vez analizado los requisitos se encontraron tres subdominios:
+
+- Inventario
+- Migración
+- Orquestación @Cap4_ImplementingPlantillaDibujo
+
+
+figura pagina 55 de implementacion
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./figure/Cap4/plantillaDDD.png}
+  \caption{Modelado del dominio}\label{DDDplantilla}
+\end{figure}
+
+
+Cada uno de estos se explicará a continuación.
+
+### Subdominio Inventario
+
+
+
+
+
+
+
+
+

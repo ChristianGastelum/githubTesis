@@ -1,0 +1,67 @@
+# Materiales y métodos
+
+Intro de Cap
+
+
+## Descripción del área de estudio
+
+## Materiales
+
+### Hardware
+
+Las herramientas utilizadas fueron las siguientes:
+
+1. Computadora Workstation que cuenta con:
+  - Procesador *Intel* i7 6800k \@4.2GHz de 6 núcleos
+  - Memoria RAM total de 32 GB \@ 2666MHz
+  - Discos duros:
+    - *Samsung* 960 EVO 500 GB NVMe SSD
+    - SSD 250 GB
+    - HDD 1 TB 7200 RPM
+2. Servidor Dell PowerEdge 2950
+  - 2x procesadores Xeon Dual Core 
+  - Memoria RAM total 16 GB
+  - Discos duros de 200 GB 1500 RPM
+3. Notebook Gateway nv52
+  - Disco duro de 320GB.
+  - Procesador AMD Athlon X2 Dual-Core QL-64 2.10Ghz.
+  - Memoria RAM 4 GB
+4. Notebook ASUS Zenbook 
+  - Procesador *Intel* i5-5200U \@ 2.2Ghz
+  - memoria RAM 8 GB
+  - Disco duro SSD 250 GB
+
+### Software
+
+Sistemas operativos utilizados:
+
+- Fedora 26 Workstation
+- Fedora 27 Workstation
+- Windows 7 
+
+En cuanto a software se utilizó:
+
+- Python 3 
+- Flask 0.12.2
+- Ansible 2.5.2
+- Kubernetes 1.9.8
+- Devstack
+- Docker 18.03.1-ce, build 9ee9f40
+- VIM 8.0.1806
+- RStudio 1.1.442
+- Kile 4.14.32
+
+## Métodos
+
+
+### Devstack
+
+*Devstack* Es una serie de scripts y utilidades para poder desplegar una nube *Openstack* @Cap4_devstack. El proceso de instalación se muestra en el apéndice A. 
+
+#### Configuración
+Tanto la configuración de usuarios y sus contraseñas son las de fabrica.
+
+### Docker
+*Docker* es una plataforma para la creacion, despliegue de contenedores @Cap4_Docker.
+
+

@@ -1,0 +1,173 @@
+
+
+# Marco Teórico  {#ref_labels}
+
+A lo largo de esté capítulo se introducen tecnologías, arquitecturas de software, las cuales son utilizadas el proyecto. Se da una breve introducción sobre a la virtualización, la cual es una de las principales características del cómputo en la nube. Adicionalmente, se presenta se define el concepto de el cómputo en la nube, sus características, modelos de despliegue y sus modelos de servicio. Se introduce el *DevOps* el cual
+
+## Virtualización
+
+La virtualización es una forma de abstracción donde los componentes de hardware son presentarlos de una forma lógica @Cap3_1_mT, con los cuales, se pueden crear maquinas virtuales. 
+En otras palabras, la virtualización  permite utilizar los recursos físicos de una computadora para crear y alojar *N* cantidad de máquinas virtuales. Para poder realizar estas tareas es necesario un hipervisor. El hipervisor se encarga de administrar los recursos de cómputo y proveerlos a las máquinas virtuales. Existen dos tipos de hipervisores:
+
+- Tipo 1 o *Bare Metal*. Es conocido como nativo, ya que corre encima del hardware de la máquina, como si fuera un sistema operativo, esto permite un aislamiento verdadero entre cada sistema operativo de cada *VM*.  
+
+- Tipo 2 o *Hosted*. Se ejecuta por encima del sistema operativo de la maquina anfitrión, esté se encarga de mostrar los recursos disponibles al hipervisor.
+
+
+La “máquina virtual” fue desarrollada por *IBM* en los años 60, donde se tenía acceso concurrente e interactivo a una computadora central desde varias terminales (monitores remotos). Cada máquina virtual era una réplica representativa de la computadora central; es decir, daba la impresión de estar físicamente en una computadora real @Cap3_2_mT. 
+
+
+## Cómputo en la nube
+
+El cómputo en la nube es un modelo para el aprovisionamiento de recursos de cómputo, los cuales son presentados en forma de catálogo. En este catálogo se presentan diversos tipos de servicios, tales como: redes, servidores, almacenamiento, aplicaciones, que pueden ser rápidamente aprovisionados y liberados con un esfuerzo mínimo de administración o de interacción con el proveedor de servicios. Adicionalmente, el cómputo en la nube está compuesto principalmente por cinco características esenciales @Cap3_3_mT.  
+
+Las principales características del cómputo en la nube son: 
+ 
+
+- Servicio en demanda. El cliente puede adquirir el poder de cómputo necesario, automáticamente sin necesidad de interacción con el proveedor. 
+
+- Conectividad. Los servicios son disponibles a través de la red, y pueden ser accedidos a través de distintas plataformas.  
+
+- Aprovisionamiento. El poder de cómputo está configurado  para servir múltiples clientes en un modelo multi-cliente, con diferentes recursos físicos y virtuales que son asignados y reasignados de acuerdo con la demanda. 
+
+- Elasticidad. El aprovisionamiento puede ser elástico y escalable. En muchos casos puede ser automática, que escale rápidamente ya sea creciendo o disminuyendo dependiendo de la demanda. 
+
+- Servicios medidos. Los recursos del cómputo en la nube son controlados y optimizados utilizando una capacidad métrica, que se puede medir por almacenamiento, procesamiento, ancho de banda o usuarios activos. La utilización de recursos puede ser monitorizada, controlada y reportada. Proveyendo transparencia tanto para el proveedor como el consumidor de sus servicios.  
+ 
+
+Adicionalmente existen múltiples formas de despliegue, las cuales pueden tener diversos usos dependiendo en el ambiente en el que se utiliza. Los modelos de despliegue son: 
+
+
+- Nube privada. La infraestructura le pertenece a una empresa. Además, la nube puede estar administrada por la empresa dueña o por terceros. A su vez, puede residir dentro o fuera de la empresa. 
+
+- Nube comunitaria. Está constituida por múltiples comunidades u organizaciones las cuales comparten recursos para un fin en común. 
+
+- Nube pública. En este modelo la infraestructura de la nube puede ser provista por organizaciones o empresas para el uso del público y está la pertenece a proveedores de nube. 
+
+- Nube híbrida. Este modelo está compuesto de dos o más modelos. 
+
+
+Uno de los grandes beneficios del modelo de nube privada, es que da, la posibilidad de brindar una buena calidad de servicios, tiempo de respuesta. Para poder implementar este modelo es necesario utilizar un sistema operativo o plataforma, como los son: *Openstack*, *Cloudstack* @Cap3_5_mT, *VMware vCloud* @Cap3_6_mT. *Openstack* es un sistema operativo que controla una gran cantidad de recursos de cómputo, almacenamiento y red @Cap3_4_mT. Los recursos son administrados por medio de un panel de control, el cual, puede ser accedido por un navegador web, donde solo tienen acceso los administradores y los.  Por último, *Openstack* es una plataforma de software libre, la cual es la más utilizada por la comunidad de software libre, además, está apoyada por múltiples empresas, entre ellas, *Red Hat*, *HP*,*Google*, etc. 
+
+
+El computo en la nube brinda diferentes niveles de servicios, en donde dependiendo del nivel seleccionado se tendrá más capacidad de personalización. Los principales niveles de servicios @ibmcloud :
+
+* Software as a Service (SaaS). Las aplicaciones basadas en la nube, las cuales son ejecutadas en computadoras distantes “en la nube” que pertenecen y son operadas por otros, las cuales conectan las computadoras de los usuarios vía internet y, usualmente, navegador web.
+
+* Platform as a service (PaaS). Provee un ambiente donde todo lo que se requiere para soportar un ciclo de desarrollo e implementación de aplicaciones web, sin la necesidad de comprar o manejar hardware, software.
+
+* Infrastructure as a service (IaaS). Provee a las compañías con recursos computacionales incluyendo servidores, redes, almacenamiento, y espacio dentro de un centro de datos con pago por uso.
+
+
+
+Los niveles de servicios que ofrece la nube han incrementado la complejidad de los sistemas actuales, lo cual ha aumentado el número de actividades de los administradores de sistemas. Estas actividades suelen ser repetitivas como: crear máquinas virtuales, instalación de actualizaciones, software o dependencias de este, aunque muchas de estas actividades se pueden ser automatizadas utilizando *scripts*. El problema recae en que muchos *scripts* son creados para realizar tareas en un ambiente especifico, además, de que en muchas ocasiones no son documentados apropiadamente, y en algunas ocasiones es necesario tener un cierto nivel de conocimiento en programación, por otro lado, para ejecutar *scripts*, es necesario obtener acceso al servidor donde serán ejecutarlos. Como resultado, ha sido necesario encontrar nuevas formas de realizar estas tareas repetitivas. 
+
+
+### Openstack
+
+
+
+
+## DevOps
+
+En el mercado actual de las tecnologías de la información se ha incrementado la velocidad de desarrollo y mantenimiento.
+La unión de las áreas de desarrollo de software y operaciones ha creado una nueva área llamada DevOps @Cap3_8mT. DevOps utiliza prácticas del desarrollo de software en la administración de infraestructura como código (*Infrastructure-as-code* IaC). *IaC* es un algoritmo que se encarga de instalar dependencias, controladores necesarios por un programa en específico en un servidor @Cap3_7mT.  Por último, DevOps promueve el uso de conjuntos de *scripts*, modelos para automatización y configuración. Esto con el propósito de reutilizar código y mejorar los tiempos de desarrollo e implementación. Existen múltiples herramientas para DevOps tales como: 
+
+• *Puppet* @Cap3_Puppet 
+
+• *Chef* @Cap3_9mT 
+
+• *Ansible* @Cap3_ansible  
+
+
+La funcionalidad de estos programas es la administración y orquestación de infraestructura. 
+
+### Ansible
+
+ *Ansible* solo necesita un nodo de administración, el cual cuenta con un inventario y múltiples *playbook*, estos últimos son los archivos de configuración, implementación y orquestación. Dentro del inventario se crean grupos en, los cuales se agregan los nombres de los servidores o direcciones IPs. Dentro de *playbook* se configuran las tareas a realizar; estos archivos son creados utilizando el formato *YAML*, por otro lado, los módulos utilizan *JSON*. Se utiliza *SSH* para la conectividad remota y no requiere abrir puertos extras. Adicionalmente,  solo requiere tener instalado* *Python*.
+
+## Arquitectura Monolítica
+
+Tradicionalmente, las aplicaciones son programadas en una sola instancia donde todas las actividades residen en una misma aplicación, también conocido como arquitectura monolítica. Lo cual, genera una problemática al tratar de actualizar el código de la aplicación, ya que muchas ocasiones puede contar con cientos si no miles de líneas de código. Además, son difíciles de comprender y mantener. Por otro lado, cuando se requiere escalar una porción de la aplicación es necesario escalar toda la aplicación, lo cual genera un mayor costo. La figura  \ref{figura1}  se puede ver varios grupos de desarrolladores trabajando en la misma aplicación sin tener definido que partes de la aplicación le pertenecen.
+
+
+<!--Se utiliza centrado de imagen, escala, label se utiliza para poder referenciar 
+Ejemplo de aplicación monolítica -->
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./figure/Cap3/monoFig1.png}
+  \caption{Aplicación monolítica}\label{figura1}
+\end{figure}
+
+
+A diferencia de la arquitectura monolítica, la arquitectura orientada a servicios, esta constituida por múltiples servicios, los cuales trabajan en conjunto para realizar una tarea. 
+El desarrollo orientado a dominio tiene como objetivo desarrollar una aplicación, la cual debe expresar el objetivo de un negocio Adicionalmente, las características. La entrega continua, virtualización, bajo demanda, automatización de infraestructura, sistemas en escala. Estas son las características que ayudan a implementar microservicios @Cap3_Microservicios. Microservicios es un conjunto de servicios autónomos que trabajan para alcanzar una meta en común. Como se habló con anterioridad las aplicaciones monolíticas limitan la forma de actualizar las aplicaciones ya que se requiere un cierto periodo de tiempo para realizar mantenimiento en el cual se realizan actualizaciones, además, de que limita las actualizaciones de esquemas y formas de manejo de datos. El alcance de cada servicio se enfoca en los alcances del negocio, esto permite reconocer con mayor facilidad el alcance o dominio de cada servicio. Uno de los beneficios que ofrece esta arquitectura es poder utilizar diversas tecnologías ya sea lenguajes de programación, base de datos ya que cada servicio es independiente de otro. Las características claves de los microservicios son:
+
+
+- Diseño orientado a dómino. Es un enfoque para el desarrollo de software con necesidades complejas mediante una profunda conexión entre la implementación y los conceptos del modelo y núcleo del negocio.
+- Principio de responsabilidad simple. De acuerdo con la filosofía de Unix cada servicio es responsable de una parte única de la funcionalidad y lo hace bien @Cap3_ArtOfLinux.
+- Interfaz explicita
+- *DURS independiente (Deploy, Update, Replace, Scale)* Cada servicio se puede implementar, actualizar, reemplazar y escalar de forma independiente.
+- *Endpoints/ pipes* Cada microservicio posee su lógica de dominio y se comunica con otros a través de protocolos simples, como REST, el cual provee conectividad.
+
+La forma en que se comunican entre sí los servicios es utilizando llamadas a través de la red. Esto puede ser utilizando RPC (Remote Procedure Calls) o REST (REpresentation State Transfer).
+
+Un microservicio puede ser implementado en múltiples ambientes tales como:
+
+- Máquinas virtuales
+- Contenedores
+- Plataforma como servicio (PaaS)
+
+
+Múltiples microservicios pueden ser implementados en el mismo ambiente, aunque no es recomendado, ya que reduce los puntos de falla. En la figura 4 se muestra un ejemplo de una aplicación utilizando la arquitectura de microservicios, en donde se tiene bien definido los dominios de cada servicio. Como se muestra en la \ref{figura2}, se tienen multiples servicios en dominios bien definidos, ademas, de tener bien definido como se comunican entre ellos.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./figure/Cap3/monoFig2.png}
+  \caption{Microservicios}\label{figura2}
+\end{figure}
+
+
+## Diseño Basado en Dominios
+
+
+
+Los fundamentos principales de DDD están basados en la discusión, escuchar, entendimiento, descubrimiento, y valores de negocio, todo esto para poder centralizar el conocimiento. Si eres capaz de entender el negocio en el cual se basará, por lo menos podrá participar en el modelado del software y podrá participar en el proceso de crear el lenguaje ubicuo. (ubicuo. Está presente a un mismo tiempo en todas partes)
+
+Durante este proceso de creado del lenguaje ubicuo es necesario entablar conversaciones con expertos del dominio. Los expertos del dominio son aquellos que conocen como funciona el negocio. Un experto del domino no esta basado en "títulos". Ya que, existen personas que conocen su área de negocio bastante bien. Por lo tanto, ellos pueden proveer información vital para el lenguaje ubicuo.
+
+Es un modelo basado en software, el cual esta basado en un dominio de negocio. También considerado como modelo objeto, donde existen objetos, los cuales tienen datos y comportamientos en base al negocio. Crear un modelo del domino es esencial para poder utilizar DDD. Utilizando DDD los modelos del dominio tienden a ser pequeños y enfocados.
+
+Permitir que los expertos del dominio y desarrolladores trabajen en conjunto, lo cual producirá un software que este basado en el negocio.
+Centralizar el conocimiento es clave, porque con esto la empresa es capaz de garantizar la comprensión del software.
+The design is the code, and the code is the design.
+
+DDD provee técnicas de desarrollo de software, las cuales se encargan del diseño estratégico y táctico. Diseño estratégico ayuda a entender cuales son las inversiones que se tiene realizar con el software, que tipo de software existe para poder obtener un software rápido y seguro. Diseño táctico ayuda a desarrollar un solo modelo de la solución.
+
+
+### Aspectos principales de DDD
+
+- Acerca a los expertos del dominio y desarrolladores para trabajar en conjunto para reflejar el modelo mental del experto. Al trabajar juntos los expertos del dominio y desarrolladores su principal objetivo es crear un lenguaje ubicuo. Este lenguaje permitirá tener una mejor comunicación y un mayor entendimiento sobre el dominio del negocio.
+
+- DDD aborda las iniciativas estratégicas de la empresa. Aunque DDD incluya técnicas de análisis, esta mas enfocado con la estrategia de dirección de la empresa. Los aspectos técnicos de la estrategia del diseño tiene como objetivo crear bounding system y preocupaciones de negocios.
+
+- Tácticas de diseño permiten a los desarrolladores producir un software que esta correctamente codificado en base a los conocimientos de los expertos del dominio, es escalable, y permite cómputo distribuido.
+
+### Valores y beneficios de DDD 
+
+
+1. Organizaciones ganan un modelo útil de su dominio. El objetivo de DDD es invertir todos los esfuerzos en lo que importa más del negocio. Se enfoca en el dominio central (Core domain). Otros modelos existen para dar soporte al dominio central.
+
+2. Una definición refinada y precisa del negocio es desarrollado. Cuando el modelo es refinado una y otra vez, se desarrolla un mejor entendimiento el cual se puede utilizar como herramienta de análisis.
+
+3. Expertos del dominio contribuyen al diseño del software. Cuando los expertos comparten sus conocimientos entre ellos, permite crear un mejor entendimiento del negocio. Esto, ayuda a el crecimiento de la empresa. Adicionalmente, los desarrolladores comparten un lenguaje ubicuo con los expertos.
+
+4. Mejor experiencia de usuario. Usualmente, la retroalimentación del usuario puede transformarse en un mejor reflejo del modelo del dominio. Cuando el software deja mucho al entendimiento del usuario, los usuarios necesitan ser entrenados para poder utilizarlo. En esencia, el usuario solo transfiere su entendimiento del software a datos, los cuales son introducidos al software. Estos datos son guardados. Sí el usuario no entiende exactamente que es lo que necesita introducir, entonces, los resultados no son los correctos.
+
+5. Los límites son claros, los cuales son planteados alrededor de los modelos. Los desarrolladores son orientados a utilizar un enfoque de negocio.
+
+6. La arquitectura empresarial es mejor organizada. Cuando los límites del contexto son bien definidos y cuidadosamente particionados, todos los equipos tienen un claro entendimiento de donde y porqué las integraciones son necesarias. Los límites son explícitos, y las relaciones entre ellos también.
+
+7. Ágil, iterativo(repetitivo), modelado continuo es usado. El objetivo de DDD es refinar el modelo mental de los expertos del dominio a un modelo útil para el negocio.
+
+8. Nuevas herramientas, estratégica y tácticas, son utilizadas. El límite contextual da al equipo límites de modelado en donde se crea una solución para un problema especifico en el dominio. Dentro de un límite contextual un lenguaje ubicuo es creado. Este, es utilizado por el equipo y en el modelo del software. Dentro de un límite de modelado pueden utilizar tácticas: Aggregates, Entidades, Objeto Valor, Servicios, Eventos del Dominio, entre otros.
