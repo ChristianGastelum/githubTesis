@@ -113,20 +113,20 @@
   \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 % To pass between YAML and LaTeX the dollar signs are added by CII
-\title{My Final College Paper}
-\author{Your R. Name}
+\title{}
+\author{}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{May 20xx}
-\division{Mathematics and Natural Sciences}
-\advisor{Advisor F. Name}
-\institution{Reed College}
-\degree{Bachelor of Arts}
+\date{}
+\division{}
+\advisor{}
+\institution{}
+\degree{}
 %If you have two advisors for some reason, you can use the following
 % Uncommented out by CII
 % End of CII addition
 
 %%% Remember to use the correct department!
-\department{Mathematics}
+\department{}
 % if you're writing a thesis in an interdisciplinary major,
 % uncomment the line below and change the text as appropriate.
 % check the Senior Handbook if unsure.
@@ -206,7 +206,6 @@ Second paragraph of abstract starts here.
 \begin{document}
 
 % Everything below added by CII
-  \maketitle
 
 \frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
@@ -237,62 +236,15 @@ Second paragraph of abstract starts here.
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on
 
-\hypertarget{introduction}{%
-\chapter*{Introduction}\label{introduction}}
-\addcontentsline{toc}{chapter}{Introduction}
-
-Welcome to the \emph{R Markdown} thesis template. This template is based
-on (and in many places copied directly from) the Reed College LaTeX
-template, but hopefully it will provide a nicer interface for those that
-have never used TeX or LaTeX before. Using \emph{R Markdown} will also
-allow you to easily keep track of your analyses in \textbf{R} chunks of
-code, with the resulting plots and output included as well. The hope is
-this \emph{R Markdown} template gets you in the habit of doing
-reproducible research, which benefits you long-term as a researcher, but
-also will greatly help anyone that is trying to reproduce or build onto
-your results down the road.
-
-Hopefully, you won't have much of a learning period to go through and
-you will reap the benefits of a nicely formatted thesis. The use of
-LaTeX in combination with \emph{Markdown} is more consistent than the
-output of a word processor, much less prone to corruption or crashing,
-and the resulting file is smaller than a Word file. While you may have
-never had problems using Word in the past, your thesis is likely going
-to be about twice as large and complex as anything you've written
-before, taxing Word's capabilities. After working with \emph{Markdown}
-and \textbf{R} together for a few weeks, we are confident this will be
-your reporting style of choice going forward.
-
-\textbf{Why use it?}
-
-\emph{R Markdown} creates a simple and straightforward way to interface
-with the beauty of LaTeX. Packages have been written in \textbf{R} to
-work directly with LaTeX to produce nicely formatting tables and
-paragraphs. In addition to creating a user friendly interface to LaTeX,
-\emph{R Markdown} also allows you to read in your data, to analyze it
-and to visualize it using \textbf{R} functions, and also to provide the
-documentation and commentary on the results of your project. Further, it
-allows for \textbf{R} results to be passed inline to the commentary of
-your results. You'll see more on this later.
-
-\textbf{Who should use it?}
-
-Anyone who needs to use data analysis, math, tables, a lot of figures,
-complex cross-references, or who just cares about the final appearance
-of their document should use \emph{R Markdown}. Of particular use should
-be anyone in the sciences, but the user-friendly nature of
-\emph{Markdown} and its ability to keep track of and easily include
-figures, automatically generate a table of contents, index, references,
-table of figures, etc. should make it of great benefit to nearly anyone
-writing a thesis project.
+\hypertarget{introduccion}{%
+\chapter*{Introducción}\label{introduccion}}
+\addcontentsline{toc}{chapter}{Introducción}
 
 \hypertarget{rmd-basics}{%
 \chapter{Planteamiento de la necesidad}\label{rmd-basics}}
 
-Intro
-
-\hypertarget{plantamiento-del-problema}{%
-\section{Plantamiento del problema}\label{plantamiento-del-problema}}
+\hypertarget{planteamiento-del-problema}{%
+\section{Planteamiento del problema}\label{planteamiento-del-problema}}
 
 Tradicionalmente, las empresas contaban con un centro de datos donde
 alojaban desde un par de servidores a cientos de estos. Un centro de
@@ -300,58 +252,58 @@ datos es un local o edificio donde reside el equipo de procesamiento de
 una o varias empresas. El centro de datos debe constar de al menos una
 habitación separada con suministro de energía independiente y control
 clima Corp (2011). El consumo de energía eléctrica dentro de un centro
-de datos es de alrededor de 45\%, por el equipo de tecnologías de la
-información, en otras palabras, servidores, almacenamiento, y
-telecomunicaciones. El otro 55\% de electricidad es consumida por las
-instalaciones, donde se incluye sistema de distribución, fuentes de
-alimentación ininterrumpidas, sistemas de enfriamiento Geng (2014).
-Asimismo, mantener un centro de datos no solo requiere constante
-monitoreo del equipo de computo, sino además, es necesario monitorizar
-todos los componentes del centro de datos, tales como:
+de datos es de alrededor de 45\% por el equipo de tecnologías de la
+información, en otras palabras, servidores y equipo de
+telecomunicaciones; el 55\% es consumida por las instalaciones, donde se
+incluye sistema de distribución, fuentes de alimentación
+ininterrumpidas, sistemas de enfriamiento Geng (2014). Así mismo,
+mantener un centro de datos no solo requiere constante monitoreo del
+equipo de cómputo, sino además, es necesario monitorizar todos los
+componentes del centro de datos, tales como:
 \begin{itemize}
 \tightlist
 \item
-  Equipo de enfriamiento
+  equipo de enfriamiento
 \item
-  Fuentes de poder
+  fuentes de poder
 \item
-  Seguridad
+  seguridad
 \item
-  Crecimiento del centro de datos.
+  crecimiento del centro de datos.
 \end{itemize}
-Por otro lado, el equipo de computo es una parte crucial para el negocio
-de una empresa. Por esta razón, es necesario tener un plan contingencia
-si algo llegara a fallar. Sí, alguna parte física de un fallase, y es
-necesario reemplazarla, todo dependerá de que tan crítico sean los
-procesos que se estén realizando en el equipo; ya que en algunas
-ocasiones es necesario crear una ventana de mantenimiento, y en algunas
-ocasiones, crear una ventana de mantenimiento puede llegar a tardar días
-a meses. Por otro lado, es necesario tener en cuenta que existen
-periodos de tiempo donde no se esta utilizando al máximo el equipo de
-computo. Lo cual es un sobre aprovisionamiento de recursos de computo.
-Un estudio realizado en 2012 por \emph{Natural Resources Defense
-Council}, en el cual se estima que en promedio servidores que ejecutan
-una sola aplicación tienden a utilizar entre 5\% y 15\% de poder de
-computo Whitney \& Kennedy (2012). Por otra parte, se estima que en
-grandes centros de datos el porcentaje de servidores obsoletos se
+Las tecnologías de la información juegan una parte vital dentro de una
+empresa. Ya qué, estas tecnologías son utilizadas para ejecutar procesos
+críticos, por lo tanto, es necesario mantener su operación óptima. Pero,
+sí daña un componente sufre una avería y se requiera un reemplazo de un
+componente físico (disco duro, fuente de poder, memoria RAM, etc). En
+algunas ocasiones, para realizar este reemplazo es necesario crear una
+ventana de mantenimiento; puede tardarse días o meses dependiendo del
+nivel de criticidad de los procesos que se estén ejecutando.
+
+Existen periodos de tiempo donde no se esta utilizando al máximo el
+equipo de cómputo. Lo cual es un sobre aprovisionamiento de recursos de
+cómputo. Un estudio realizado en 2012 por \emph{Natural Resources
+Defense Council}, donde se estimo que en promedio servidores que
+ejecutan una sola aplicación tienden a utilizar entre 5\% y 15\% de
+poder de cómputo Whitney \& Kennedy (2012) Por otra parte, se estima que
+en grandes centros de datos el porcentaje de servidores obsoletos se
 encuentra entre 20\% y 30\% Delforge (2014).
 
-Por otro parte, si una empresa está teniendo un crecimiento bastante
-acelerado donde la capacidad de computo con la que cuentan actualmente
+Por el contrario, si una empresa está teniendo un crecimiento bastante
+acelerado donde la capacidad de cómputo con la que cuentan actualmente
 será insuficiente en poco tiempo. La empresa se verá en la necesidad de
-adquirir nuevo equipo de cómputo. Una vez que se realice la compra, el
-tiempo de entrega depende del lugar de entrega y disponibilidad del
-equipo en cuestión Dell (2015). Lo cual, puede generar problemas al no
-tener la infraestructura necesaria para escalar el servicio, lo que
-conlleva a una posibilidad de pérdida de clientes e inestabilidad de los
-servicios.
+adquirir nuevo equipo de cómputo. El tiempo de entrega dependerá del
+lugar de entrega y disponibilidad del equipo en cuestión Dell (2015). Lo
+cual, puede generar problemas al no tener la infraestructura necesaria
+para escalar el servicio, lo que conlleva a una posibilidad de pérdida
+de clientes e inestabilidad de los servicios.
 
 \hypertarget{objetivo-general}{%
 \section{Objetivo General}\label{objetivo-general}}
 
 Crear un esquema para migración de infraestructura física de TI a la
-nube, con el fin de agilizar y reducir el proceso de migración para el
-usuario.
+nube, con el fin de agilizar y reducir el proceso de migración que
+necesita realizar el usuario.
 
 \hypertarget{objetivos-especificos}{%
 \subsection{Objetivos específicos}\label{objetivos-especificos}}
@@ -371,10 +323,10 @@ usuario.
 \hypertarget{justificacion}{%
 \section{Justificación}\label{justificacion}}
 
-El computo en la nube ha transformado como las tecnologías de
+El cómputo en la nube ha transformado como las tecnologías de
 información ofrecen sus servicios y, además, como son consumidas
 Pinkelman (1993). Las compañías que arriendan su infraestructura o
-servicios de computo son conocidos como proveedores de nube.
+servicios de cómputo son conocidos como proveedores de nube.
 Actualmente, existen múltiples proveedores de nube alrededor del mundo.
 Esto les da la oportunidad a las empresas de adquirir los servicios de
 los proveedores, lo cual podría expandir sus mercados a uno global.
@@ -382,17 +334,15 @@ Estos servicios son presentados en un catálogo, en donde un usuario u
 organización puede seleccionar el servicio deseado, utilizarlo y al
 final solo pagar por el tiempo de consumo, como un pago más de
 utilidades. Esto les da a los usuarios la posibilidad de acceder a un
-gran poder de computo sin necesidad de una fuerte inversión inicial. Por
+gran poder de cómputo sin necesidad de una fuerte inversión inicial. Por
 lo que brinda a las empresas grandes facilidades, ya que no solo reduce
 el costo de inversión inicial. Además, permite administrar el equipo de
-cómputo desde un solo lugar. Un ejemplo claro de esto es el caso del
+cómputo desde un solo lugar. Un ejemplo claro de esto, es el caso del
 Hospital Firmley Park donde se necesitaba reducir el tiempo
-administrativo del equipo de cómputo, esto con el objetivo para poder
-concentrarse en nuevas estrategias tecnológicas La solución a este
-problema fue virtualizar las computadoras de escritorio de los
-empleados, con el objetivo de poder administrar todo el equipo de
-cómputo desde un solo lugar, y se accedía a estas utilizando conexión
-remota (``Frimley,'' 2018).
+administrativo del equipo de cómputo. La solución a este problema fue
+virtualizar las computadoras de escritorio de los empleados, con el
+objetivo de poder administrar todo desde un solo lugar, y se accedía a
+estas utilizando conexión remota (``Frimley,'' 2018).
 
 Gracias al cómputo en la nube es posible tener múltiples respaldos de
 aplicaciones o computadoras, no solo en diferentes computadoras, sino
@@ -421,22 +371,8 @@ máquinas virtuales. Durante el periodo de migración, en los equipos de
 cómputo se iniciará la tarea de creación de imagines virtuales de estos.
 Estas imágenes se utilizarán para subirlas a la nube.
 
-\hypertarget{alcance-del-proyecto}{%
-\section{Alcance del proyecto}\label{alcance-del-proyecto}}
-
-\hypertarget{tipo-de-proyecto}{%
-\section{Tipo de proyecto}\label{tipo-de-proyecto}}
-
 \hypertarget{ref_labels}{%
 \chapter{Marco Teórico}\label{ref_labels}}
-
-A lo largo de esté capítulo se introducen tecnologías, arquitecturas de
-software, las cuales son utilizadas el proyecto. Se da una breve
-introducción sobre a la virtualización, la cual es una de las
-principales características del cómputo en la nube. Adicionalmente, se
-presenta se define el concepto de el cómputo en la nube, sus
-características, modelos de despliegue y sus modelos de servicio. Se
-introduce el \emph{DevOps} el cual
 
 \hypertarget{virtualizacion}{%
 \section{Virtualización}\label{virtualizacion}}
@@ -571,11 +507,8 @@ para ejecutar \emph{scripts}, es necesario obtener acceso al servidor
 donde serán ejecutarlos. Como resultado, ha sido necesario encontrar
 nuevas formas de realizar estas tareas repetitivas.
 
-\hypertarget{openstack}{%
-\subsection{Openstack}\label{openstack}}
-
-\hypertarget{devops}{%
-\section{DevOps}\label{devops}}
+\hypertarget{ansible}{%
+\subsection{Ansible}\label{ansible}}
 
 En el mercado actual de las tecnologías de la información se ha
 incrementado la velocidad de desarrollo y mantenimiento. La unión de las
@@ -592,15 +525,12 @@ múltiples herramientas para DevOps tales como:~
 
 • \emph{Puppet} (2017a)~
 
-• \emph{Chef} (2018a)~
+• \emph{Chef} (2018)~
 
 • \emph{Ansible} (2017b)
 
 La funcionalidad de estos programas es la administración y orquestación
 de infraestructura.
-
-\hypertarget{ansible}{%
-\subsection{Ansible}\label{ansible}}
 
 \emph{Ansible} solo necesita un nodo de administración, el cual cuenta
 con un inventario y múltiples \emph{playbook}, estos últimos son los
@@ -612,8 +542,8 @@ las tareas a realizar; estos archivos son creados utilizando el formato
 \emph{SSH} para la conectividad remota y no requiere abrir puertos
 extras.~Adicionalmente, solo requiere tener instalado* \emph{Python}.
 
-\hypertarget{arquitectura-monolitica}{%
-\section{Arquitectura Monolítica}\label{arquitectura-monolitica}}
+\hypertarget{microservicios}{%
+\section{Microservicios}\label{microservicios}}
 
 Tradicionalmente, las aplicaciones son programadas en una sola instancia
 donde todas las actividades residen en una misma aplicación, también
@@ -687,6 +617,11 @@ como:
 \item
   Plataforma como servicio (PaaS)
 \end{itemize}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./figure/Cap3/monoFig2.png}
+  \caption{Microservicios}\label{figura2}
+\end{figure}
 Múltiples microservicios pueden ser implementados en el mismo ambiente,
 aunque no es recomendado, ya que reduce los puntos de falla. En la
 figura 4 se muestra un ejemplo de una aplicación utilizando la
@@ -694,11 +629,7 @@ arquitectura de microservicios, en donde se tiene bien definido los
 dominios de cada servicio. Como se muestra en la \ref{figura2}, se
 tienen multiples servicios en dominios bien definidos, ademas, de tener
 bien definido como se comunican entre ellos.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.5]{./figure/Cap3/monoFig2.png}
-  \caption{Microservicios}\label{figura2}
-\end{figure}
+
 \hypertarget{diseno-basado-en-dominios}{%
 \section{Diseño Basado en Dominios}\label{diseno-basado-en-dominios}}
 
@@ -707,33 +638,24 @@ escuchar, entendimiento, descubrimiento, y valores de negocio, todo esto
 para poder centralizar el conocimiento. Si eres capaz de entender el
 negocio en el cual se basará, por lo menos podrá participar en el
 modelado del software y podrá participar en el proceso de crear el
-lenguaje ubicuo. (ubicuo. Está presente a un mismo tiempo en todas
-partes)
-
-Durante este proceso de creado del lenguaje ubicuo es necesario entablar
-conversaciones con expertos del dominio. Los expertos del dominio son
-aquellos que conocen como funciona el negocio. Un experto del domino no
-esta basado en ``títulos''. Ya que, existen personas que conocen su área
-de negocio bastante bien. Por lo tanto, ellos pueden proveer información
-vital para el lenguaje ubicuo.
+lenguaje ubicuo.
 
 Es un modelo basado en software, el cual esta basado en un dominio de
 negocio. También considerado como modelo objeto, donde existen objetos,
 los cuales tienen datos y comportamientos en base al negocio. Crear un
 modelo del domino es esencial para poder utilizar DDD. Utilizando DDD
-los modelos del dominio tienden a ser pequeños y enfocados.
-
-Permitir que los expertos del dominio y desarrolladores trabajen en
-conjunto, lo cual producirá un software que este basado en el negocio.
-Centralizar el conocimiento es clave, porque con esto la empresa es
-capaz de garantizar la comprensión del software. The design is the code,
-and the code is the design.
+los modelos del dominio tienden a ser pequeños y enfocados. Permitir que
+los expertos del dominio y desarrolladores trabajen en conjunto, lo cual
+producirá un software que este basado en el negocio. Centralizar el
+conocimiento es clave, porque con esto la empresa es capaz de garantizar
+la comprensión del software.
 
 DDD provee técnicas de desarrollo de software, las cuales se encargan
 del diseño estratégico y táctico. Diseño estratégico ayuda a entender
 cuales son las inversiones que se tiene realizar con el software, que
 tipo de software existe para poder obtener un software rápido y seguro.
-Diseño táctico ayuda a desarrollar un solo modelo de la solución.
+Diseño táctico ayuda a desarrollar un solo modelo de la solución Newman
+(2015).
 
 \hypertarget{aspectos-principales-de-ddd}{%
 \subsection{Aspectos principales de
@@ -797,9 +719,9 @@ DDD}\label{valores-y-beneficios-de-ddd}}
   integraciones son necesarias. Los límites son explícitos, y las
   relaciones entre ellos también.
 \item
-  Ágil, iterativo(repetitivo), modelado continuo es usado. El objetivo
-  de DDD es refinar el modelo mental de los expertos del dominio a un
-  modelo útil para el negocio.
+  Ágil, iterativo, modelado continuo es usado. El objetivo de DDD es
+  refinar el modelo mental de los expertos del dominio a un modelo útil
+  para el negocio.
 \item
   Nuevas herramientas, estratégica y tácticas, son utilizadas. El límite
   contextual da al equipo límites de modelado en donde se crea una
@@ -809,160 +731,9 @@ DDD}\label{valores-y-beneficios-de-ddd}}
   pueden utilizar tácticas: Aggregates, Entidades, Objeto Valor,
   Servicios, Eventos del Dominio, entre otros.
 \end{enumerate}
-\hypertarget{materiales-y-metodos}{%
-\chapter{Materiales y métodos}\label{materiales-y-metodos}}
-
-Intro de Cap
-
-\hypertarget{descripcion-del-area-de-estudio}{%
-\section{Descripción del área de
-estudio}\label{descripcion-del-area-de-estudio}}
-
-\hypertarget{materiales}{%
-\section{Materiales}\label{materiales}}
-
-\hypertarget{hardware}{%
-\subsection{Hardware}\label{hardware}}
-
-Las herramientas utilizadas fueron las siguientes:
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Computadora Workstation que cuenta con:
-\end{enumerate}
-\begin{itemize}
-\tightlist
-\item
-  Procesador \emph{Intel} i7 6800k @4.2GHz de 6 núcleos
-\item
-  Memoria RAM total de 32 GB @ 2666MHz
-\item
-  Discos duros:
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{Samsung} 960 EVO 500 GB NVMe SSD
-  \item
-    SSD 250 GB
-  \item
-    HDD 1 TB 7200 RPM
-  \end{itemize}
-\end{itemize}
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Servidor Dell PowerEdge 2950
-\end{enumerate}
-\begin{itemize}
-\tightlist
-\item
-  2x procesadores Xeon Dual Core
-\item
-  Memoria RAM total 16 GB
-\item
-  Discos duros de 200 GB 1500 RPM
-\end{itemize}
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  Notebook Gateway nv52
-\end{enumerate}
-\begin{itemize}
-\tightlist
-\item
-  Disco duro de 320GB.
-\item
-  Procesador AMD Athlon X2 Dual-Core QL-64 2.10Ghz.
-\item
-  Memoria RAM 4 GB
-\end{itemize}
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-  Notebook ASUS Zenbook
-\end{enumerate}
-\begin{itemize}
-\tightlist
-\item
-  Procesador \emph{Intel} i5-5200U @ 2.2Ghz
-\item
-  memoria RAM 8 GB
-\item
-  Disco duro SSD 250 GB
-\end{itemize}
-\hypertarget{software}{%
-\subsection{Software}\label{software}}
-
-Sistemas operativos utilizados:
-\begin{itemize}
-\tightlist
-\item
-  Fedora 26 Workstation
-\item
-  Fedora 27 Workstation
-\item
-  Windows 7
-\end{itemize}
-En cuanto a software se utilizó:
-\begin{itemize}
-\tightlist
-\item
-  Python 3
-\item
-  Flask 0.12.2
-\item
-  Ansible 2.5.2
-\item
-  Kubernetes 1.9.8
-\item
-  Devstack
-\item
-  Docker 18.03.1-ce, build 9ee9f40
-\item
-  VIM 8.0.1806
-\item
-  RStudio 1.1.442
-\item
-  Kile 4.14.32
-\end{itemize}
-\hypertarget{metodos}{%
-\section{Métodos}\label{metodos}}
-
-\hypertarget{devstack}{%
-\subsection{Devstack}\label{devstack}}
-
-\emph{Devstack} Es una serie de scripts y utilidades para poder
-desplegar una nube \emph{Openstack} (2018b). El proceso de instalación
-se muestra en el apéndice A.
-
-\hypertarget{configuracion}{%
-\subsubsection{Configuración}\label{configuracion}}
-
-Tanto la configuración de usuarios y sus contraseñas son las de fabrica.
-
-\hypertarget{docker}{%
-\subsection{Docker}\label{docker}}
-
-\emph{Docker} es una plataforma para la creacion, despliegue de
-contenedores Mouat (2015).
-
 \hypertarget{modelacion-utilizando-diseno-basado-en-dominios}{%
 \chapter{Modelacion utilizando diseño basado en
 dominios}\label{modelacion-utilizando-diseno-basado-en-dominios}}
-
-Utilizando el esquema de migración. El usuario debe contar con una
-cuenta en Openstack, en este proyecto se utilizaron los usuarios y
-contraseñas de fabrica. Se proveerá un \emph{script}, el cual obtendrá
-información básica para crear una maquina virtual. Con esta información
-se crea un inventario donde el usuario puede seleccionar, eliminar
-equipo de computo. 0
 
 \hypertarget{requisitos}{%
 \section{Requisitos}\label{requisitos}}
@@ -1022,17 +793,6 @@ Cada uno de estos se explicará a continuación.
 \hypertarget{conclusion}{%
 \chapter*{Conclusion}\label{conclusion}}
 \addcontentsline{toc}{chapter}{Conclusion}
-
-If we don't want Conclusion to have a chapter number next to it, we can
-add the \texttt{\{-\}} attribute.
-
-\textbf{More info}
-
-And here's some other random info: the first paragraph after a chapter
-title or section head \emph{shouldn't be} indented, because indents are
-to tell the reader that you're starting a new paragraph. Since that's
-obvious after a chapter or section title, proper typesetting doesn't add
-an indent there.
 
 \appendix
 
@@ -1123,10 +883,6 @@ O'Reilly Media, Inc.".
 Mell, P., Grance, T., \& others. (2011). The nist definition of cloud
 computing.
 
-\leavevmode\hypertarget{ref-Cap4_Docker}{}%
-Mouat, A. (2015). \emph{Using docker: Developing and deploying software
-with containers}. " O'Reilly Media, Inc.".
-
 \leavevmode\hypertarget{ref-Cap3_Microservicios}{}%
 Newman, S. (2015). \emph{Building microservices: Designing fine-grained
 systems}. " O'Reilly Media, Inc.".
@@ -1177,11 +933,7 @@ conference of the centre for advanced studies on collaborative research}
 \url{https://www.ansible.com}
 
 \leavevmode\hypertarget{ref-Cap3_9mT}{}%
-(2018a). \emph{Chef}. Retrieved from \url{https://www.chef.io/chef/}
-
-\leavevmode\hypertarget{ref-Cap4_devstack}{}%
-(2018b). \emph{Devstack}. Retrieved from
-\url{https://docs.openstack.org/devstack/latest/}
+(2018). \emph{Chef}. Retrieved from \url{https://www.chef.io/chef/}
 
 
 % Index?

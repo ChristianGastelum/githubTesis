@@ -2,7 +2,9 @@
 
 # Marco Teórico  {#ref_labels}
 
-A lo largo de esté capítulo se introducen tecnologías, arquitecturas de software, las cuales son utilizadas el proyecto. Se da una breve introducción sobre a la virtualización, la cual es una de las principales características del cómputo en la nube. Adicionalmente, se presenta se define el concepto de el cómputo en la nube, sus características, modelos de despliegue y sus modelos de servicio. Se introduce el *DevOps* el cual
+<!-- A lo largo de esté capítulo se introducen tecnologías, arquitecturas de software, las cuales son utilizadas el proyecto. Se da una breve introducción sobre a la virtualización, la cual es una de las principales características del cómputo en la nube. Adicionalmente, se presenta se define el concepto de el cómputo en la nube, sus características, modelos de despliegue y sus modelos de servicio. Se introduce el *DevOps* el cual
+-->
+
 
 ## Virtualización
 
@@ -62,13 +64,16 @@ El computo en la nube brinda diferentes niveles de servicios, en donde dependien
 
 Los niveles de servicios que ofrece la nube han incrementado la complejidad de los sistemas actuales, lo cual ha aumentado el número de actividades de los administradores de sistemas. Estas actividades suelen ser repetitivas como: crear máquinas virtuales, instalación de actualizaciones, software o dependencias de este, aunque muchas de estas actividades se pueden ser automatizadas utilizando *scripts*. El problema recae en que muchos *scripts* son creados para realizar tareas en un ambiente especifico, además, de que en muchas ocasiones no son documentados apropiadamente, y en algunas ocasiones es necesario tener un cierto nivel de conocimiento en programación, por otro lado, para ejecutar *scripts*, es necesario obtener acceso al servidor donde serán ejecutarlos. Como resultado, ha sido necesario encontrar nuevas formas de realizar estas tareas repetitivas. 
 
-
+<!--
 ### Openstack
 
 
 
 
 ## DevOps
+-->
+
+### Ansible
 
 En el mercado actual de las tecnologías de la información se ha incrementado la velocidad de desarrollo y mantenimiento.
 La unión de las áreas de desarrollo de software y operaciones ha creado una nueva área llamada DevOps @Cap3_8mT. DevOps utiliza prácticas del desarrollo de software en la administración de infraestructura como código (*Infrastructure-as-code* IaC). *IaC* es un algoritmo que se encarga de instalar dependencias, controladores necesarios por un programa en específico en un servidor @Cap3_7mT.  Por último, DevOps promueve el uso de conjuntos de *scripts*, modelos para automatización y configuración. Esto con el propósito de reutilizar código y mejorar los tiempos de desarrollo e implementación. Existen múltiples herramientas para DevOps tales como: 
@@ -82,11 +87,13 @@ La unión de las áreas de desarrollo de software y operaciones ha creado una nu
 
 La funcionalidad de estos programas es la administración y orquestación de infraestructura. 
 
+<!--
 ### Ansible
-
+-->
  *Ansible* solo necesita un nodo de administración, el cual cuenta con un inventario y múltiples *playbook*, estos últimos son los archivos de configuración, implementación y orquestación. Dentro del inventario se crean grupos en, los cuales se agregan los nombres de los servidores o direcciones IPs. Dentro de *playbook* se configuran las tareas a realizar; estos archivos son creados utilizando el formato *YAML*, por otro lado, los módulos utilizan *JSON*. Se utiliza *SSH* para la conectividad remota y no requiere abrir puertos extras. Adicionalmente,  solo requiere tener instalado* *Python*.
 
-## Arquitectura Monolítica
+## Microservicios
+
 
 Tradicionalmente, las aplicaciones son programadas en una sola instancia donde todas las actividades residen en una misma aplicación, también conocido como arquitectura monolítica. Lo cual, genera una problemática al tratar de actualizar el código de la aplicación, ya que muchas ocasiones puede contar con cientos si no miles de líneas de código. Además, son difíciles de comprender y mantener. Por otro lado, cuando se requiere escalar una porción de la aplicación es necesario escalar toda la aplicación, lo cual genera un mayor costo. La figura  \ref{figura1}  se puede ver varios grupos de desarrolladores trabajando en la misma aplicación sin tener definido que partes de la aplicación le pertenecen.
 
@@ -119,8 +126,6 @@ Un microservicio puede ser implementado en múltiples ambientes tales como:
 - Plataforma como servicio (PaaS)
 
 
-Múltiples microservicios pueden ser implementados en el mismo ambiente, aunque no es recomendado, ya que reduce los puntos de falla. En la figura 4 se muestra un ejemplo de una aplicación utilizando la arquitectura de microservicios, en donde se tiene bien definido los dominios de cada servicio. Como se muestra en la \ref{figura2}, se tienen multiples servicios en dominios bien definidos, ademas, de tener bien definido como se comunican entre ellos.
-
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.5]{./figure/Cap3/monoFig2.png}
@@ -128,22 +133,28 @@ Múltiples microservicios pueden ser implementados en el mismo ambiente, aunque 
 \end{figure}
 
 
+Múltiples microservicios pueden ser implementados en el mismo ambiente, aunque no es recomendado, ya que reduce los puntos de falla. En la figura 4 se muestra un ejemplo de una aplicación utilizando la arquitectura de microservicios, en donde se tiene bien definido los dominios de cada servicio. Como se muestra en la \ref{figura2}, se tienen multiples servicios en dominios bien definidos, ademas, de tener bien definido como se comunican entre ellos.
+
+<!--
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./figure/Cap3/monoFig2.png}
+  \caption{Microservicios}\label{figura2}
+\end{figure}
+
+-->
+
+
+
 ## Diseño Basado en Dominios
 
-
-
-Los fundamentos principales de DDD están basados en la discusión, escuchar, entendimiento, descubrimiento, y valores de negocio, todo esto para poder centralizar el conocimiento. Si eres capaz de entender el negocio en el cual se basará, por lo menos podrá participar en el modelado del software y podrá participar en el proceso de crear el lenguaje ubicuo. (ubicuo. Está presente a un mismo tiempo en todas partes)
-
-Durante este proceso de creado del lenguaje ubicuo es necesario entablar conversaciones con expertos del dominio. Los expertos del dominio son aquellos que conocen como funciona el negocio. Un experto del domino no esta basado en "títulos". Ya que, existen personas que conocen su área de negocio bastante bien. Por lo tanto, ellos pueden proveer información vital para el lenguaje ubicuo.
+Los fundamentos principales de DDD están basados en la discusión, escuchar, entendimiento, descubrimiento, y valores de negocio, todo esto para poder centralizar el conocimiento. Si eres capaz de entender el negocio en el cual se basará, por lo menos podrá participar en el modelado del software y podrá participar en el proceso de crear el lenguaje ubicuo. 
 
 Es un modelo basado en software, el cual esta basado en un dominio de negocio. También considerado como modelo objeto, donde existen objetos, los cuales tienen datos y comportamientos en base al negocio. Crear un modelo del domino es esencial para poder utilizar DDD. Utilizando DDD los modelos del dominio tienden a ser pequeños y enfocados.
-
 Permitir que los expertos del dominio y desarrolladores trabajen en conjunto, lo cual producirá un software que este basado en el negocio.
 Centralizar el conocimiento es clave, porque con esto la empresa es capaz de garantizar la comprensión del software.
-The design is the code, and the code is the design.
 
-DDD provee técnicas de desarrollo de software, las cuales se encargan del diseño estratégico y táctico. Diseño estratégico ayuda a entender cuales son las inversiones que se tiene realizar con el software, que tipo de software existe para poder obtener un software rápido y seguro. Diseño táctico ayuda a desarrollar un solo modelo de la solución.
-
+DDD provee técnicas de desarrollo de software, las cuales se encargan del diseño estratégico y táctico. Diseño estratégico ayuda a entender cuales son las inversiones que se tiene realizar con el software, que tipo de software existe para poder obtener un software rápido y seguro. Diseño táctico ayuda a desarrollar un solo modelo de la solución @Cap3_Microservicios.
 
 ### Aspectos principales de DDD
 
@@ -168,6 +179,6 @@ DDD provee técnicas de desarrollo de software, las cuales se encargan del dise�
 
 6. La arquitectura empresarial es mejor organizada. Cuando los límites del contexto son bien definidos y cuidadosamente particionados, todos los equipos tienen un claro entendimiento de donde y porqué las integraciones son necesarias. Los límites son explícitos, y las relaciones entre ellos también.
 
-7. Ágil, iterativo(repetitivo), modelado continuo es usado. El objetivo de DDD es refinar el modelo mental de los expertos del dominio a un modelo útil para el negocio.
+7. Ágil, iterativo, modelado continuo es usado. El objetivo de DDD es refinar el modelo mental de los expertos del dominio a un modelo útil para el negocio.
 
 8. Nuevas herramientas, estratégica y tácticas, son utilizadas. El límite contextual da al equipo límites de modelado en donde se crea una solución para un problema especifico en el dominio. Dentro de un límite contextual un lenguaje ubicuo es creado. Este, es utilizado por el equipo y en el modelo del software. Dentro de un límite de modelado pueden utilizar tácticas: Aggregates, Entidades, Objeto Valor, Servicios, Eventos del Dominio, entre otros.

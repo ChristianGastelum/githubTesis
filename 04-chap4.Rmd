@@ -4,9 +4,9 @@ You can delete the header-includes (lines 3-5 above) if you like and also the ch
 
 -->
 # Modelacion utilizando diseño basado en dominios
-
+<!--
 Utilizando el esquema de migración. El usuario debe contar con una cuenta en Openstack, en este proyecto se utilizaron los usuarios y contraseñas de fabrica. Se proveerá un *script*, el cual obtendrá información básica para crear una maquina virtual. Con esta información se crea un inventario donde el usuario puede seleccionar, eliminar equipo de computo. 0
-
+-->
 ## Requisitos
 - Permita reconocer el equipo de computo en la red. 
 - Crear un inventario con el equipo de computo del usuario.

@@ -8,34 +8,40 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 # Planteamiento de la necesidad {#rmd-basics}
 
-Intro 
 
-## Plantamiento del problema
+## Planteamiento del problema
 
 Tradicionalmente, las empresas contaban con un centro de datos donde alojaban desde un par de servidores a cientos de estos. 
 Un centro de datos es un local o edificio donde reside el equipo de procesamiento de una o varias empresas.
 El centro de datos debe constar de al menos una habitación separada con suministro de energía independiente y control clima @Cap1_4_PdP.
-El consumo de energía eléctrica dentro de un  centro de datos es de alrededor de  45%, por el equipo de tecnologías de la información, en otras palabras, servidores, almacenamiento, y telecomunicaciones. El otro 55% de electricidad es consumida por las instalaciones, donde se incluye sistema de distribución, fuentes de alimentación ininterrumpidas, sistemas de enfriamiento @Cap1_5_PdP.
-Asimismo, mantener un centro de datos no solo requiere constante monitoreo del equipo de computo, sino además, es necesario monitorizar todos los componentes del centro de datos, tales como:
+El consumo de energía eléctrica dentro de un centro de datos es de alrededor de 45% por el equipo de tecnologías de la información, en otras palabras, servidores y equipo de telecomunicaciones; el 55% es consumida por las instalaciones, donde se incluye sistema de distribución, fuentes de alimentación ininterrumpidas, sistemas de enfriamiento @Cap1_5_PdP.
+Así mismo, mantener un centro de datos no solo requiere constante monitoreo del equipo de cómputo, sino además, es necesario monitorizar todos los componentes del centro de datos, tales como:
 
-- Equipo de enfriamiento
-- Fuentes de poder
-- Seguridad 
-- Crecimiento del centro de datos.
- 
-
-Por otro lado, el equipo de computo es una parte crucial para el negocio de una empresa. Por esta razón, es necesario tener un plan contingencia si algo llegara a fallar. Sí, alguna parte física de un fallase, y es necesario reemplazarla, todo dependerá de que tan crítico sean los procesos que se estén realizando en el equipo; ya que en algunas ocasiones es necesario crear una ventana de mantenimiento, y en algunas ocasiones, crear una ventana de mantenimiento puede llegar a tardar días a meses. 
-Por otro lado, es necesario tener en cuenta que existen periodos de tiempo donde no se esta utilizando al máximo el equipo de computo. Lo cual es un sobre aprovisionamiento de recursos de computo. Un estudio realizado en 2012 por *Natural Resources Defense Council*, en el cual se estima que en promedio servidores que ejecutan una sola aplicación tienden a utilizar entre 5% y 15% de poder de computo @Cap1_1_PdP.
-Por otra parte, se estima que en grandes centros de datos el porcentaje de servidores obsoletos se encuentra entre 20% y 30% @Cap1_2_PdP.
+- equipo de enfriamiento
+- fuentes de poder
+- seguridad 
+- crecimiento del centro de datos.
 
 
 
-Por otro parte, si una empresa está teniendo un crecimiento bastante acelerado donde la capacidad de computo con la que cuentan actualmente será insuficiente en poco tiempo. La empresa se verá en la necesidad de adquirir nuevo equipo de cómputo. Una vez que se realice la compra, el tiempo de entrega depende del lugar de entrega y disponibilidad del equipo en cuestión @Cap1_3_PdP. Lo cual, puede generar problemas al no tener la infraestructura necesaria para escalar el servicio, lo que conlleva a una posibilidad de pérdida de clientes e inestabilidad de los servicios.
+Las tecnologías de la información juegan una parte vital dentro de una empresa. Ya qué, estas tecnologías son utilizadas para ejecutar procesos críticos, por lo tanto, es necesario mantener su operación óptima. Pero, sí daña un componente sufre una avería y se requiera un reemplazo de un componente físico (disco duro, fuente de poder, memoria RAM, etc). En algunas ocasiones, para realizar este reemplazo es necesario crear una ventana de mantenimiento; puede tardarse días o meses dependiendo del nivel de criticidad de los procesos que se estén ejecutando.
 
+
+Existen periodos de tiempo donde no se esta utilizando al máximo el equipo de cómputo. Lo cual es un sobre aprovisionamiento de recursos de cómputo. Un estudio realizado en 2012 por *Natural Resources Defense Council*, donde se estimo que en promedio servidores que ejecutan una sola aplicación tienden a utilizar entre 5% y 15% de poder de cómputo @Cap1_1_PdP
+Por otra parte, se estima que en grandes centros de datos el porcentaje de servidores obsoletos se encuentra entre 20% y 30% @Cap1_2_PdP. 
+
+Por el contrario, si una empresa está teniendo un crecimiento bastante acelerado donde la capacidad de cómputo con la que cuentan actualmente será insuficiente en poco tiempo. La empresa se verá en la necesidad de adquirir nuevo equipo de cómputo. El tiempo de entrega dependerá del lugar de entrega y disponibilidad del equipo en cuestión @Cap1_3_PdP. Lo cual, puede generar problemas al no tener la infraestructura necesaria para escalar el servicio, lo que conlleva a una posibilidad de pérdida de clientes e inestabilidad de los servicios. 
+<!--
+COMPRAR EQUIPO DE COMPUTO REQUIERE 
+
+Muchas empresas están adoptando nuevas tecnologías para reducir costos y aumentar aprovechamiento de recursos de computo, Virtualización, computo en la nube y contenedores son de las mas comunes. Pero para poder adoptar estas tecnologías en muchas ocasiones es necesario cambiar la forma de ofrecer servicios 
+
+MODELO DE NEGOCIO
+-->
 
 ## Objetivo General
 
-Crear un esquema para migración de infraestructura física de TI a la nube, con el fin de agilizar y reducir el proceso de migración para el usuario.
+Crear un esquema para migración de infraestructura física de TI a la nube, con el fin de agilizar y reducir el proceso de migración que necesita realizar el usuario.
 
 ### Objetivos específicos
 
@@ -52,7 +58,7 @@ Crear un esquema para migración de infraestructura física de TI a la nube, con
 ## Justificación
 
 
-El computo en la nube ha transformado como las tecnologías de información ofrecen sus servicios y, además, como son consumidas @Cap1_ACMInroads. Las compañías que arriendan su infraestructura o servicios de computo son conocidos como proveedores de nube. Actualmente, existen múltiples proveedores de nube alrededor del mundo. Esto les da la oportunidad a las empresas de adquirir los servicios de los proveedores, lo cual podría expandir sus mercados a uno global. Estos servicios son presentados en un catálogo, en donde un usuario u organización puede seleccionar el servicio deseado, utilizarlo y al final solo pagar por el tiempo de consumo, como un pago más de utilidades. Esto les da a los usuarios la posibilidad de acceder a un gran poder de computo sin necesidad de una fuerte inversión inicial. Por lo que brinda a las empresas grandes facilidades, ya que no solo reduce el costo de inversión inicial. Además, permite administrar el equipo de cómputo desde un solo lugar.  Un ejemplo claro de esto es el caso del Hospital Firmley Park donde se necesitaba reducir el tiempo administrativo del equipo de cómputo, esto con el objetivo para poder concentrarse en nuevas estrategias tecnológicas La solución a este problema fue virtualizar las computadoras de escritorio de los empleados, con el objetivo de poder administrar todo el equipo de cómputo desde un solo lugar, y se accedía a estas utilizando conexión remota @Cap1_Hospital.
+El cómputo en la nube ha transformado como las tecnologías de información ofrecen sus servicios y, además, como son consumidas @Cap1_ACMInroads. Las compañías que arriendan su infraestructura o servicios de cómputo son conocidos como proveedores de nube. Actualmente, existen múltiples proveedores de nube alrededor del mundo. Esto les da la oportunidad a las empresas de adquirir los servicios de los proveedores, lo cual podría expandir sus mercados a uno global. Estos servicios son presentados en un catálogo, en donde un usuario u organización puede seleccionar el servicio deseado, utilizarlo y al final solo pagar por el tiempo de consumo, como un pago más de utilidades. Esto les da a los usuarios la posibilidad de acceder a un gran poder de cómputo sin necesidad de una fuerte inversión inicial. Por lo que brinda a las empresas grandes facilidades, ya que no solo reduce el costo de inversión inicial. Además, permite administrar el equipo de cómputo desde un solo lugar.  Un ejemplo claro de esto, es el caso del Hospital Firmley Park donde se necesitaba reducir el tiempo administrativo del equipo de cómputo. La solución a este problema fue virtualizar las computadoras de escritorio de los empleados, con el objetivo de poder administrar todo desde un solo lugar, y se accedía a estas utilizando conexión remota @Cap1_Hospital.
 
 Gracias al cómputo en la nube es posible tener múltiples respaldos de aplicaciones o computadoras, no solo en diferentes computadoras, sino hasta en diferentes países. Por esta razón, es posible brindar un mejor rendimiento a los clientes, dado que es posible tener instancias de una aplicación lo más cercano posible a él.
 
@@ -61,8 +67,8 @@ La migración de tecnologías de la información a la nube en muchas ocasiones r
 Por último, se creará una aplicación que utilice un esquema de detección, replicación y migración a la nube. Esta aplicación realizará lo siguiente: Durante el periodo de detección, buscará el equipo de cómputo dentro de una red, obtendrá información crucial de cada uno de estos (CPU, RAM, disco duro). Esta información se utilizará para crear máquinas virtuales. Durante el periodo de migración, en los equipos de cómputo se iniciará la tarea de creación de imagines virtuales de estos. Estas imágenes se utilizarán para subirlas a la nube.
 
 
-
+ <!--
 ## Alcance del proyecto
 
 ## Tipo de proyecto
-
+-->
