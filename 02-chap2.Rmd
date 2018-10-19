@@ -71,7 +71,12 @@ Los niveles de servicios que ofrece la nube han incrementado la complejidad de l
 
 
 ## DevOps
+
+Openstack the path of cloud Pagina 13
 -->
+
+
+
 
 ### Ansible
 

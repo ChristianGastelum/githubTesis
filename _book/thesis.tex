@@ -246,36 +246,40 @@ Second paragraph of abstract starts here.
 \hypertarget{planteamiento-del-problema}{%
 \section{Planteamiento del problema}\label{planteamiento-del-problema}}
 
-Tradicionalmente, las empresas contaban con un centro de datos donde
-alojaban desde un par de servidores a cientos de estos. Un centro de
-datos es un local o edificio donde reside el equipo de procesamiento de
-una o varias empresas. El centro de datos debe constar de al menos una
-habitación separada con suministro de energía independiente y control
-clima Corp (2011). El consumo de energía eléctrica dentro de un centro
-de datos es de alrededor de 45\% por el equipo de tecnologías de la
-información, en otras palabras, servidores y equipo de
-telecomunicaciones; el 55\% es consumida por las instalaciones, donde se
-incluye sistema de distribución, fuentes de alimentación
-ininterrumpidas, sistemas de enfriamiento Geng (2014). Así mismo,
-mantener un centro de datos no solo requiere constante monitoreo del
-equipo de cómputo, sino además, es necesario monitorizar todos los
-componentes del centro de datos, tales como:
+Tradicionalmente, las empresas contaban con un centro de datos. Un
+centro de datos es un edificio que alberga el equipo de procesamiento de
+datos y telecomunicaciones de una o varias compañías u organizaciones.
+Adicionalmente, este debe constar de al menos un cuarto separado con
+suministro de energía independiente y control de clima Corp (2011).
+Alguno de los componentes que se pueden llegar a encontrar en este tipo
+de cuartos son:
+
+Algunas de las características que algunos centros de datos pueden
+brindar son:
+
+Algunas de las características que puede llegar a ofrecer un centro de
+datos son:
 \begin{itemize}
-\tightlist
 \item
-  equipo de enfriamiento
+  Alta disponibilidad
 \item
-  fuentes de poder
+  seguridad perimetral
 \item
-  seguridad
-\item
-  crecimiento del centro de datos.
 \end{itemize}
+El consumo de energía eléctrica dentro de un centro de datos es de
+alrededor de 45\% por el equipo de tecnologías de la información, en
+otras palabras, servidores y equipo de telecomunicaciones; el 55\% es
+consumida por las instalaciones, donde se incluye sistema de
+distribución, fuentes de alimentación ininterrumpidas, sistemas de
+enfriamiento Geng (2014).
+
 Las tecnologías de la información juegan una parte vital dentro de una
 empresa. Ya qué, estas tecnologías son utilizadas para ejecutar procesos
-críticos, por lo tanto, es necesario mantener su operación óptima. Pero,
-sí daña un componente sufre una avería y se requiera un reemplazo de un
-componente físico (disco duro, fuente de poder, memoria RAM, etc). En
+críticos de una empresa, por lo tanto, es necesario mantener su óptima
+operación. Por esta razón, es necesario monitorear cada aspecto
+
+Pero, en caso de que sí se dañase algún componente y se requiera
+reemplazo, ya sea: disco duro, fuente de poder, memoria RAM, etc. En
 algunas ocasiones, para realizar este reemplazo es necesario crear una
 ventana de mantenimiento; puede tardarse días o meses dependiendo del
 nivel de criticidad de los procesos que se estén ejecutando.
@@ -297,6 +301,70 @@ lugar de entrega y disponibilidad del equipo en cuestión Dell (2015). Lo
 cual, puede generar problemas al no tener la infraestructura necesaria
 para escalar el servicio, lo que conlleva a una posibilidad de pérdida
 de clientes e inestabilidad de los servicios.
+
+\hypertarget{condiciones-a-considerar-cuando-se-quiere-migrar-a-la-nube}{%
+\section{Condiciones a considerar cuando se quiere migrar a la
+nube}\label{condiciones-a-considerar-cuando-se-quiere-migrar-a-la-nube}}
+
+Existen varias considerados que se deben tomar en cuenta cuando se esta
+decidiendo que tipo de modelo de la nube es el mejor para la empresa.
+Para esto, es necesario determinar cuales son los requisitos que se debe
+de cumplir la empresa:
+\begin{itemize}
+\tightlist
+\item
+  Requisitos o regulaciones a cumplir. Estas serán las que dictaminen
+  que modelo de despliegue se utilizará.
+\item
+  Recursos financieros disponibles a invertir.
+\item
+  Locación geográfica. Esto es importante ya que dependiendo de la
+  ubicación de los clientes puede variar la latencia. Por esto, es
+  importante saber donde se encuentran los centros de datos de los
+  proveedores de nube.
+\item
+  Elasticidad y demanda
+\item
+  Contratos, gastos de capital y de operación.
+\end{itemize}
+\hypertarget{desarrollo-o-introduccion-sobre-el-orden-de-migracion.}{%
+\subsection{Desarrollo o introducción sobre el orden de
+migración.}\label{desarrollo-o-introduccion-sobre-el-orden-de-migracion.}}
+
+Un problema que pueden enfrentar las nuevas empresas, es la adopción del
+cómputo en la nube, ya que, ya no se encuentra en su etapa de adopción.
+Por lo que es necesario adoptarla lo mas pronto posible, para poder
+competir en el mercado tecnológico.
+
+Los beneficios económicos obtenidos al migrar a la nube también están
+ligados a sacrificios computacionales, entre estos están:
+\begin{itemize}
+\tightlist
+\item
+  perdida de control sobre los sistemas.
+\item
+  aplicaciones comparten recursos.
+\item
+  latencia sobre peticiones es dictaminada por los recursos disponibles
+  en ese momento.
+\end{itemize}
+Estos recursos incluyen: - ciclos de CPU - datos en memoria - datos en
+cache - datos en dispositivos de almacenamiento.
+
+\hypertarget{cuando-es-recomendable-cambiarse-a-la-nube}{%
+\subsection{Cuando es recomendable cambiarse a la
+nube}\label{cuando-es-recomendable-cambiarse-a-la-nube}}
+
+Cuando los servicios no requieren un alto rendimiento tiene sentido
+virtualizar esos sistemas, ya que pueden ser fáciles de pausar y
+reiniciar sin que las aplicaciones sepan que se movieron de centro de
+datos.
+
+El problema con arquitecturas virtualizadas aparece cuando las
+aplicaciones tienen alta demanda en almacenamiento y conectividad. Un
+disco virtualizado tratada de reportar el numero de
+\emph{IOS}(Operaciones por segundo), pero el hardware que esta usando es
+compartido, y es difícil mantener la consistencia de esta operación.
 
 \hypertarget{objetivo-general}{%
 \section{Objetivo General}\label{objetivo-general}}
