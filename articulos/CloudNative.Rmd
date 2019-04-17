@@ -1,0 +1,156 @@
+# Cloud Native Architecture Patterns Fundamentals
+
+https://learning.oreilly.com/learning-paths/learning-path-cloud/9781491984499/9781491984291-/ch01.html
+
+
+## Why ?
+    - Business Drivers Influencing Architectural Change
+    - Introduction to DevOps and Continuous Delivery
+    - Architecturing for DevOps and Continuous Delivery
+    - Characteristics of Cloud Infraestructure.
+
+
+Infrastructure is all the software and hardware that support applications.1 This includes data centers, operating systems, deployment pipelines, configuration management, and any system or software needed to support the life cycle of applications.
+
+Countless time and money has been spent on infrastructure. Through years of evolving the technology and refining practices, some companies have been able to run infrastructure and applications at massive scale and with renowned agility. Efficiently running infrastructure accelerates business by enabling faster iteration and shorter times to market.
+
+** Before we explore how to build infraestructure designed to run applications in the 
+cloud, we need to understand how we got where we are. First, we'll discuss the benefits
+of adopting cloud native practices. Next, we'll look at a brief history of Infraestructure. and when discuss features of the next stage, called "cloud Native", and
+how it relates to your applications, the platform where it runs, and your Business.
+
+Once you understand the problem, we’ll show you the solution and how to implement it.
+**
+
+Consuming services also lets you build a customized platform with the services you need (sometimes called Services as a Platform [SaaP]). When you use cloud-hosted services, you do not need expertise in operating every service your applications require. This dramatically impacts your ability to change and adds value to your business.
+
+Cloud native practices can also bridge the gap between traditional engineering roles (a common goal of DevOps). Systems engineers will be able to learn best practices from applications, and application engineers can take ownership of the infrastructure where their applications run
+
+## Servers
+
+At the beginning of the internet, web infrastructure got its start with physical servers. Servers are big, noisy, and expensive, and they require a lot of power and people to keep them running. They are cared for extensively and kept running as long as possible. Compared to cloud infrastructure, they are also more difficult to purchase and prepare for an application to run on them.
+
+Once you buy one, it’s yours to keep, for better or worse. Servers fit into the well-established capital expenditure cost of business. The longer you can keep a physical server running, the more value you will get from your money spent. It is always important to do proper capacity planning and make sure you get the best return on investment.
+
+Physical servers are great because they’re powerful and can be configured however you want. They have a relatively low failure rate and are engineered to avoid failures with redundant power supplies, fans, and RAID controllers. They also last a long time. Businesses can squeeze extra value out of hardware they purchase through extended warranties and replacement parts.
+
+However, physical servers lead to waste. Not only are the servers never fully utilized, but they also come with a lot of overhead. It’s difficult to run multiple applications on the same server. Software conflicts, network routing, and user access all become more complicated when a server is maximally utilized with multiple applications.
+
+Hardware virtualization promised to solve some of these problems.
+
+
+## virtualization
+
+Virtualization emulates a physical server’s hardware in software. A virtual server can be created on demand, is entirely programmable in software, and never wears out so long as you can emulate the hardware.
+
+Using a hypervisor2 increases these benefits because you can run multiple virtual machines (VMs) on a physical server. It also allows applications to be portable because you can move a VM from one physical server to another.
+
+One problem with running your own virtualization platform, however, is that VMs still require hardware to run. Companies still need to have all the people and processes required to run physical servers, but now capacity planning becomes harder because they have to account for VM overhead too. At least, that was the case until the public cloud.
+
+
+## Infrastructure as a Service 
+
+Infrastructure as a Service (IaaS) is one of the many offerings of a cloud provider. It provides raw networking, storage, and compute that customers can consume as needed. It also includes support services such as identity and access management (IAM), provisioning, and inventory systems.
+
+IaaS allows companies to get rid of all of their hardware and to rent VMs or physical servers from someone else. This frees up a lot of people resources and gets rid of processes that were needed for purchasing, maintenance, and, in some cases, capacity planning.
+
+IaaS fundamentally changed infrastructure’s relationship with businesses. Instead of being a capital expenditure benefited from over time, it is an operational expense for running your business. Businesses can pay for their infrastructure the same way they pay for electricity and people’s time. With billing based on consumption, the sooner you get rid of infrastructure, the smaller your operational costs will be.
+
+Hosted infrastructure also made consumable HTTP Application Programming Interfaces (APIs) for customers to create and manage infrastructure on demand. Instead of needing a purchase order and waiting for physical items to ship, engineers can make an API call, and a server will be created. The server can be deleted and discarded just as easily.
+
+Running your infrastructure in a cloud does not make your infrastructure cloud native. IaaS still requires infrastructure management. Outside of purchasing and managing physical resources, you can—and many companies do—treat IaaS identically to the traditional infrastructure they used to buy and rack in their own data centers. 
+
+
+## ESTO SE DEBE DE IMPLEMENTAR EN LAS APLICACIONES
+
+### 12-FACTOR APPLICATIONS
+Heroku was one of the early pioneers who offered a publicly consumable PaaS. Through many years of expanding its own platform, the company was able to identify patterns that helped applications run better in their environment. There are 12 main factors that Heroku defines that a developer should try to implement.
+
+The 12 factors are about making developers efficient by separating code logic from data; automating as much as possible; having distinct build, ship, and run stages; and declaring all the application’s dependencies.
+
+## Cloud Native Infrastructure 
+
+Cloud native infrastructure is infrastructure that is hidden behind useful abstractions, controlled by APIs, managed by software, and has the purpose of running applications. Running infrastructure with these traits gives rise to a new pattern for managing that infrastructure in a scalable, efficient way.
+
+Infrastructure that is managed by software is a key differentiator in the cloud. Software-controlled infrastructure enables infrastructure to scale, and it also plays a role in resiliency, provisioning, and maintainability. The software needs to be aware of the infrastructure’s abstractions and know how to take an abstract resource and implement it in consumable IaaS components accordingly.
+
+## What is not cloud native Infraestructure?
+
+Cloud native infrastructure is not only running infrastructure on a public cloud. Just because you rent server time from someone else does not make your infrastructure cloud native. The processes to manage IaaS are often no different than running a physical data center, and many companies that have migrated existing infrastructure to the cloud( lift and shift ) have failed to reap the rewards
+
+\e.g., Kubernetes and Mesos). Container orchestrators provide many platform features needed in cloud native infrastructure, but not using the features as intended means your applications are dynamically scheduled to run on a set of servers.
+
+### SCHEDULER VERSUS ORCHESTRATOR
+
+
+ the orchestrator is responsible for all resource utilization in a cluster (e.g., storage, network, and CPU). The term is typically used to describe products that do many tasks, such as health checks and cloud automation.
+
+Schedulers are a subset of orchestration platforms and are responsible only for picking which processes and services run on each server.
+
+We will explore how cloud native infrastructure is different by looking at the processes to deploy, manage, test, and operate infrastructure in later chapters, but first we will look at which applications are successful and when you should use cloud native infrastructure. 
+
+## Cloud Native applications 
+
+We need to see what is different about cloud native compared to traditional applications so we can understand their new relationship with infrastructure. 
+
+**A cloud native application is engineered to run on a platform and is designed for resiliency, agility, operability, and observability. Resiliency embraces failures instead of trying to prevent them; it takes advantage of the dynamic nature of running on a platform. Agility allows for fast deployments and quick iterations. Operability adds control of application life cycles from inside the application instead of relying on external processes and monitors. Observability provides information to answer questions about application state.**
+
+Cloud native applications acquire these traits through various methods. It can often depend on where your applications run5 and the processes and culture of the business. The following are common ways to implement the desired characteristics of a cloud native application:
+
+- Microservices
+    Applications that are managed and deployed as single entities are often called **MONOLITHS**. Monoliths have a lot of benefits 
+    when applications are initially developed. They are easier to understand and allow you to change major functionality without affecting other services.
+
+    As complexity of the application grows, the benefits of monoliths diminish. They become harder to understand, and they lose
+    agility because it is harder for engineers to reason about and make changes to the code
+    
+    One of the best ways to fight complexity is to separate clearly defined functionality into smaller services and let each service independently iterate. 
+    This increases the application’s agility by allowing portions of it to be changed more easily as needed.
+    Each microservice can be managed by separate teams, written in appropriate languages, and be independently scaled as needed.
+
+**  So long as each service adheres to strong contracts,( Versioning APIs is a key aspect to maintaining service contracts )
+    the application can improve and change quickly. There are of course many other considerations for moving to microservice architecture. Not the least of these is resilient communication, which we address in Appendix A.** 
+
+- Health reporting
+
+    To increase the operability of cloud native applications, applications should expose a health check.
+    Developers can implement this as a command or process signal that the application can respond to after 
+    performing self-checks, or, more commonly, as a web endpoint provided by the application that returns 
+    health status via an HTTP code.
+
+    Applications have more than just healthy or unhealthy states. They will go through a startup and shutdown process during which they should report their state through their health check. If the application can let the platform know exactly what state it is in, it will be easier for the platform to know how to operate it.
+
+    **A good example is when the platform needs to know when the application is available to receive traffic. 
+    While the application is starting, it cannot properly handle traffic, and it should present itself as not ready.
+    This additional state will prevent the application from being terminated prematurely, because if health checks fail, the platform may assume the application is not healthy and stop or restart it repeatedly.**
+
+    Application health is just one part of being able to automate application life cycles. In addition to knowing if the application is healthy, you need to know if the application is doing any work. That information comes from telemetry data.
+
+- Telemetry data
+    Telemetry data is the information necessary for making decisions.
+    Health reporting informs us of application life cycle state, while telemetry data informs us of application business objectives.The metrics you measure are sometimes called *service-level indicators (SLIs)* or *key performance indicators (KPIs)*). 
+    These are application-specific data that allow you to make sure the performance of applications is within a service-level objective (SLO)
+    
+    Telemetry and metrics are used to solve questions such as:
+
+        - How many requests per minute does the application receive?
+
+        - Are there any errors?
+
+        - What is the application latency?
+
+        - How long does it take to place an order?
+
+    **RED method**
+        Rate
+            How many requests received
+
+        Errors
+            How many errors from the application
+
+        Duration
+            How long to receive a response
+
+- Resiliency
+
+- Declarative, not reactive

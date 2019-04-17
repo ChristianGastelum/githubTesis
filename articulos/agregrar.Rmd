@@ -1,0 +1,189 @@
+# Economía sobre el cómputo en la nube
+A View of Cloud Computing
+Documento https://dl.acm.org/citation.cfm?id=1721672
+
+Published in:
+￼
+
+· Magazine
+Communications of the ACM CACM Homepage archive
+Volume 53 Issue 4, April 2010
+Pages 50-58
+ACM New York, NY, USA
+table of contents doi>10.1145/1721654.1721672
+
+
+
+Developers with innovative ideas for new Internet services
+no longer require the large capital outlays in hardware to
+deploy their service or the human expense to operate it. 
+They need not to be concerned about overprovisioning for a service 
+whose popularity does not meet their predictions, thus wasting 
+costly resources, or underprovisioning for one that becomes
+widly popular, thus missing potential customers and revenue.
+
+For a hardware provisioning and pricing point of view, three aspects
+are new in cloud computing.
+
+- the appearance of infinite computing resources available on demand,
+  quickly enough to follow load surges, thereby eliminating thhe need
+  forcloud computing users to plan far ahead for provisioning.
+
+- the elimination of an up-front commitment by cloud users, thereby 
+  allowing companies to start small and increase hardware resources
+  only when there is an increase in their needs.
+
+- The ability to pay for use of computing resources on a short-term basis
+as needed (for example, processors by the hour and storage by the day) and re-
+lease them as needed, thereby rewarding conservation by letting machines
+and storage go when they are no longer useful.
+
+# Research Challengers for Cloud Computing Economics
+https://bib.irb.hr/datoteka/526864.Cloud_Darko_Androcec.pdf
+Darko Andročec
+Faculty of Organization and Informatics
+University of Zagreb
+Pavlinska 2, 42000 Varaždin, Croatia
+
+The key advantages of Cloud Computing described in
+[10] are: lower cost of entry for smaller firms,
+immediate access to hardware resources with no
+upfront user’s capital investments, lower IT barriers
+to innovation, easy scaling of services, new classes of
+application and services. A SWOT analysis is also
+shown in [10]. 
+
+Main Cloud Computing strengths are
+the ability to scale up services, the ability to
+effectively use time-distributed computing resources,
+reduced infrastructure costs, energy savings, reduced
+upgrades and maintenance costs.
+
+Linthicum [9] presented many dimensions of the
+Cloud Computing value: ongoing operational cost
+reduction, capital preserving, value of upsizing and
+downsizing on demand, shifting the risk, agility and
+reuse. In the same book he also proposed the
+cost/benefit methodology that is composed of eight
+steps: understand the existing issues, assign costs,
+model “as is”, model “to be”, define value points,
+define hard benefits, define soft benefits, create final
+business case
+
+
+##como saber si vale la pena migrar a la nube 
+
+
+Misra and Mondal [12] described ROI model with
+two steps. First step is identification of a company’s
+suitability for the adoption of Cloud Computing using
+suitability index calculation. They made mathematical
+formulas using relevant factors and its assigned
+credits (weights) according to their relative
+importance. Some of the key factors shown in [12]
+are: size of the IT resources (number of servers, size
+of customer base, annual revenue from IT offering,
+number of countries IT is spread across), the
+utilization pattern of the resources (average usage,
+peak usage, amount of data handling), sensitivity of
+the company’s data, criticality of work done by the
+organization. On doing the calculation a numerical
+value would be obtained, and if the value for a
+particular organization is below the lower limit,
+company is not suitable for Cloud services adoption
+
+
+
+
+#The Cost of a Cloud: Research Problems in Data Center Networks
+https://mvdirona.com/jrh/TalksAndPapers/CostOfClouds_CCR.pdf
+
+Albert Greenberg, James Hamilton, David A. Maltz, Parveen Patel
+Microsoft Research, Redmond, WA, USA
+
+Referencias 
+12  A. Brown and D. A. Patterson. Embracing Failure: A Case
+for Recovery-Oriented Computing (ROC). In High
+
+20 Performance Transaction Processing Symposium, 2001.M. Isard. Autopilot: Automatic data center management.
+Operating Systems Review, 41(2), 2007.u
+
+21  Z. Kerravala. Configuration management delivers business
+resiliency. The Yankee Group, Nov 2002.
+
+25 W. Enck et al. Configuration Management at Massive Scale:
+System Design and Experience. IEEE JSAC - Network
+Infrastructure Configuration, 2008.
+
+## Difference between Enterprise DC an Cloud DC
+
+First and foremost, the leading cost in the enterprise is operational
+staff. In the data center, such costs are so small (under 5% due
+to automation)
+
+In a well-run enterprise, a typical ratio of IT staff members to servers is 1:100.
+Automation is partial [25]. and human error is the cause of a large fraction of performance impacting problems [21]
+
+In cloud service
+data centers, automation is a mandatory requirement of scale, and
+it is accordingly a foundational principle of design [20]. In a well
+run data center, a typical ratio of staff members to servers is 1:1000.
+Automated, recovery-oriented computing techniques cope successfully
+with the vast majority of problems that arise [20, 12].
+
+**There are additional differences between the enterprise and
+the cloud service data center environments **including:
+Large economies of scale. The size of cloud scale data centers
+(some now approaching 100,000 severs) presents an opportunity
+to leverage economies of scale not present in the enterprise
+data centers, though the up front costs are high.
+Scale Out. Enterprises often optimize for physical space and
+number of devices, consolidating workload onto a small number of
+high-price “scale-up” hardware devices and servers. Cloud service
+data centers “scale-out” — distributing workload over large numbers
+of low cost servers and hardware
+
+
+2.1 Server cost
+
+ the greatest data center costs go to servers.
+For example, assuming 50,000 servers, a relatively aggressive price
+of $3000 per server, a 5% cost of money, and a 3 year amortization,
+the amortized cost of servers comes to $52.5 million dollars
+per year. With prices this high, achieving high utilization, i.e. useful
+work accomplished per dollar invested, is an important goal. Unfortunately,
+utilization in the data center can turn out to be remarkably
+low; e.g., 10%. There are some structural reasons for this:
+
+Uneven Application fit: A server integrates CPU, memory,
+network and (often) storage components. It is often the case that
+the application fit in the server does not fully utilize one or more of
+these components.
+
+Uncertainty in demand forecasts: Cloud service demands
+can spike quickly, especially for new services, far beyond what conventional
+(say 95th percentile-based) forecasts would predict.
+
+Long provisioning time scales: Purchases, whether for upgrades
+or new builds, tend to be large, with components bought in
+bulk. Infrastructure is typically meant to last very long time periods;
+e.g., fifteen years. Servers are meant to last as long as 3-5
+years, with increments ordered quarterly or yearly.
+
+Risk Management: If successful, a service creator might reason,
+demand could ramp up beyond the capacity of the resources
+allocated to the service (and demand, as noted, can be hard to forecast).
+Inability to meet demand brings failure just when success is
+at hand. Given long provisioning time scales, the size of the investment,
+the uncertainty in demand, and the negative consequences
+of failure, conservatism leading to over-provisioning is a natural
+mechanism for risk management.
+
+Hoarding: It is easy to get buy in from a service team for
+provisioning new resources, and less easy for returning them, given
+the factors already discussed. Inefficiencies of this type multiply
+across service instances.
+
+Virtualization short-falls: Ideally, all resources (compute, storage,
+and networking) would be pooled, with services dynamically
+drawing from the pools to meet demand. Virtualization techniques

@@ -17,21 +17,44 @@ European Scientific Journal April 2013 edition vol.9, No.12 ISSN: 1857 – 7881 
 PHYSICAL SERVER AND VIRTUAL SERVER: THE
 PERFORMANCE TRADE-OFFS -->
 
+<!-- 
+iNICIAR CON ESTE ARTICULO, Y LUEGO SEGUIR CON LO QUE SE TIENE ESCRITO
+https://www.datacenterknowledge.com/archives/2013/01/08/top-five-data-center-issues-dcim-to-the-rescue
 
-Tradicionalmente, las empresas contaban con un centro de datos. <!-- donde alojaban desde un par de servidores a cientos de estos.--> 
-Un centro de datos es un edificio que alberga el equipo de procesamiento de datos y telecomunicaciones de una o varias compañías u organizaciones. Adicionalmente, este debe constar de al menos un cuarto separado con suministro de energía independiente y control de clima @Cap1_4_PdP. Alguno de los componentes que se pueden llegar a encontrar en este tipo de cuartos son: 
+hablar sobre el centro de datos y sus características
 
+mencionar algunos de los standares de los centros de datos y la problematica
+que puede generar mantener los componentes electricos o como considerar el crecimiento.
+
+
+AQUI HABLAR DEL CAPEX, posiblemente buscar un porcentaje de recursos de una empresa 
+que gasta al mes, para mantener un centro de datos "decente".i
+
+al tener un datacenter es necesario contar con personal capacitado para realizar 
+esa tarea, o administrador de sistema, el cual no soolo se encarga de realizar 
+el monitoreo, cambios de partes fisicas como Sistemas oeprativos,etc. 
+
+-->
+
+
+Tradicionalmente, las empresas contaban con un centro de datos.
+<!-- donde alojaban desde un par de servidores a cientos de estos.--> 
+Un centro de datos es un edificio donde reside el equipo de procesamiento de datos y telecomunicaciones de una o varias compañías u organizaciones.
+<!--u organizaciones; este, debe  -->
+
+Adicionalmente, un centro de datos debe constar de al menos un cuarto separado, donde se: encuentre suministro de energía independiente y control de clima @Cap1_4_PdP.
+<!--Alguno de los componentes que se pueden llegar a encontrar en este tipo de cuartos son: 
 Algunas de las características que algunos centros de datos pueden brindar son:
 
 
-<!--Algunos de los componentes de este cuarto son : ejemplos. Por otro lado, un centro de datos puede puede tener diferentes características dependiendo del giro de la empresa. -->
+Algunos de los componentes de este cuarto son : ejemplos. Por otro lado, un centro de datos puede puede tener diferentes características dependiendo del giro de la empresa.
 Algunas de las características que puede llegar a ofrecer un centro de datos son: 
 
 - Alta disponibilidad
 - seguridad perimetral
 - 
 
-
+-->
 
 El consumo de energía eléctrica dentro de un centro de datos es de alrededor de 45% por el equipo de tecnologías de la información, en otras palabras, servidores y equipo de telecomunicaciones; el 55% es consumida por las instalaciones, donde se incluye sistema de distribución, fuentes de alimentación ininterrumpidas, sistemas de enfriamiento @Cap1_5_PdP.
 
