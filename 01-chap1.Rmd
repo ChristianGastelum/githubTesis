@@ -34,15 +34,15 @@ al tener un datacenter es necesario contar con personal capacitado para realizar
 esa tarea, o administrador de sistema, el cual no soolo se encarga de realizar 
 el monitoreo, cambios de partes fisicas como Sistemas oeprativos,etc. 
 
+a mediados del siglo pasado empezaron a surgir los centros de datos donde se encontraban los mainframes los cuales abarcaban habitaciones enteras.
+
+Data centers are at the center of modern software technology, serving a critical role in the expanding capabilities for enterprises
 -->
 
+Los centros de datos han sido una parte esencial y critica para las empresas desde hace muchos años; ya qué, es donde reside el equipo de procesamiento de datos y telecomunicaciones. 
+El cual, debe constar de al menos un cuarto separado, donde se encuentre el suministro de energía independiente y control de clima @Cap1_4_PdP.
+Esto con el proposito de ...
 
-Tradicionalmente, las empresas contaban con un centro de datos.
-<!-- donde alojaban desde un par de servidores a cientos de estos.--> 
-Un centro de datos es un edificio donde reside el equipo de procesamiento de datos y telecomunicaciones de una o varias compañías u organizaciones.
-<!--u organizaciones; este, debe  -->
-
-Adicionalmente, un centro de datos debe constar de al menos un cuarto separado, donde se: encuentre suministro de energía independiente y control de clima @Cap1_4_PdP.
 <!--Alguno de los componentes que se pueden llegar a encontrar en este tipo de cuartos son: 
 Algunas de las características que algunos centros de datos pueden brindar son:
 
