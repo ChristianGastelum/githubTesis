@@ -39,9 +39,15 @@ a mediados del siglo pasado empezaron a surgir los centros de datos donde se enc
 Data centers are at the center of modern software technology, serving a critical role in the expanding capabilities for enterprises
 -->
 
-Los centros de datos han sido una parte esencial y critica para las empresas desde hace muchos años; ya qué, es donde reside el equipo de procesamiento de datos y telecomunicaciones. 
-El cual, debe constar de al menos un cuarto separado, donde se encuentre el suministro de energía independiente y control de clima @Cap1_4_PdP.
-Esto con el proposito de ...
+
+
+Los centros de datos son una parte esencial para las empresas, ya que es donde reside el equipo de telecomunicaciones, almacenamiento y procesamiento de datos críticos.
+Lo cual, facilita la toma de decisiones para poder llevar un negocio. 
+
+
+es donde reside el equipo de procesamiento de datos y telecomunicaciones. 
+Este, debe constar de al menos un cuarto separado, donde se encuentre el suministro de energía independiente y control de clima @Cap1_4_PdP.
+Esto con el propósito de ...
 
 <!--Alguno de los componentes que se pueden llegar a encontrar en este tipo de cuartos son: 
 Algunas de las características que algunos centros de datos pueden brindar son:
