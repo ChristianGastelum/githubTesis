@@ -230,9 +230,11 @@ Second paragraph of abstract starts here.
 \hypertarget{planteamiento-del-problema}{%
 \section{Planteamiento del problema}\label{planteamiento-del-problema}}
 
-Tradicionalmente, las empresas contaban con un centro de datos.
-Un centro de datos es un edificio donde reside el equipo de procesamiento de datos y telecomunicaciones de una o varias compañías u organizaciones.
-Adicionalmente, un centro de datos debe constar de al menos un cuarto separado, donde se: encuentre suministro de energía independiente y control de clima Corp (2011).
+Los centros de datos son una parte esencial para las empresas, ya que es donde reside el equipo de telecomunicaciones, almacenamiento y procesamiento de datos críticos para un negocio.
+Lo cual, facilita la toma de decisiones.
+Adicionalmente un centro de datos debe tener por lo menos un cuarto separado, donde se encuentre el suministro de energía independiente y control de clima Corp (2011).
+
+Esto con el propósito de \ldots{}
 
 El consumo de energía eléctrica dentro de un centro de datos es de alrededor de 45\% por el equipo de tecnologías de la información, en otras palabras, servidores y equipo de telecomunicaciones; el 55\% es consumida por las instalaciones, donde se incluye sistema de distribución, fuentes de alimentación ininterrumpidas, sistemas de enfriamiento Geng (2014).
 
@@ -387,7 +389,7 @@ La unión de las áreas de desarrollo de software y operaciones ha creado una nu
 
 • \emph{Puppet} (2017a)~
 
-• \emph{Chef} (2018)~
+• \emph{Chef} (2018a)~
 
 • \emph{Ansible} (2017b)
 
@@ -480,6 +482,146 @@ DDD provee técnicas de desarrollo de software, las cuales se encargan del dise�
 \item
   Nuevas herramientas, estratégica y tácticas, son utilizadas. El límite contextual da al equipo límites de modelado en donde se crea una solución para un problema especifico en el dominio. Dentro de un límite contextual un lenguaje ubicuo es creado. Este, es utilizado por el equipo y en el modelo del software. Dentro de un límite de modelado pueden utilizar tácticas: Aggregates, Entidades, Objeto Valor, Servicios, Eventos del Dominio, entre otros.
 \end{enumerate}
+\hypertarget{materiales-y-metodos}{%
+\chapter{Materiales y métodos}\label{materiales-y-metodos}}
+
+Intro de Cap
+
+\hypertarget{descripcion-del-area-de-estudio}{%
+\section{Descripción del área de estudio}\label{descripcion-del-area-de-estudio}}
+
+\hypertarget{materiales}{%
+\section{Materiales}\label{materiales}}
+
+\hypertarget{hardware}{%
+\subsection{Hardware}\label{hardware}}
+
+Las herramientas utilizadas fueron las siguientes:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Computadora Workstation que cuenta con:
+\end{enumerate}
+\begin{itemize}
+\tightlist
+\item
+  Procesador \emph{Intel} i7 6800k @4.2GHz de 6 núcleos
+\item
+  Memoria RAM total de 32 GB @ 2666MHz
+\item
+  Discos duros:
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Samsung} 960 EVO 500 GB NVMe SSD
+  \item
+    SSD 250 GB
+  \item
+    HDD 1 TB 7200 RPM
+  \end{itemize}
+\end{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Servidor Dell PowerEdge 2950
+\end{enumerate}
+\begin{itemize}
+\tightlist
+\item
+  2x procesadores Xeon Dual Core
+\item
+  Memoria RAM total 16 GB
+\item
+  Discos duros de 200 GB 1500 RPM
+\end{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Notebook Gateway nv52
+\end{enumerate}
+\begin{itemize}
+\tightlist
+\item
+  Disco duro de 320GB.
+\item
+  Procesador AMD Athlon X2 Dual-Core QL-64 2.10Ghz.
+\item
+  Memoria RAM 4 GB
+\end{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Notebook ASUS Zenbook
+\end{enumerate}
+\begin{itemize}
+\tightlist
+\item
+  Procesador \emph{Intel} i5-5200U @ 2.2Ghz
+\item
+  memoria RAM 8 GB
+\item
+  Disco duro SSD 250 GB
+\end{itemize}
+\hypertarget{software}{%
+\subsection{Software}\label{software}}
+
+Sistemas operativos utilizados:
+\begin{itemize}
+\tightlist
+\item
+  Fedora 26 Workstation
+\item
+  Fedora 27 Workstation
+\item
+  Windows 7
+\end{itemize}
+En cuanto a software se utilizó:
+\begin{itemize}
+\tightlist
+\item
+  Python 3
+\item
+  Flask 0.12.2
+\item
+  Ansible 2.5.2
+\item
+  Kubernetes 1.9.8
+\item
+  Devstack
+\item
+  Docker 18.03.1-ce, build 9ee9f40
+\item
+  VIM 8.0.1806
+\item
+  RStudio 1.1.442
+\item
+  Kile 4.14.32
+\end{itemize}
+\hypertarget{metodos}{%
+\section{Métodos}\label{metodos}}
+
+\hypertarget{devstack}{%
+\subsection{Devstack}\label{devstack}}
+
+\emph{Devstack} Es una serie de scripts y utilidades para poder desplegar una nube \emph{Openstack} (2018b). El proceso de instalación se muestra en el apéndice A.
+
+\hypertarget{configuracion}{%
+\subsubsection{Configuración}\label{configuracion}}
+
+Tanto la configuración de usuarios y sus contraseñas son las de fabrica.
+
+\hypertarget{docker}{%
+\subsection{Docker}\label{docker}}
+
+\emph{Docker} es una plataforma para la creacion, despliegue de contenedores Mouat (2015).
+
 \hypertarget{modelacion-utilizando-diseno-basado-en-dominios}{%
 \chapter{Modelacion utilizando diseño basado en dominios}\label{modelacion-utilizando-diseno-basado-en-dominios}}
 
@@ -540,6 +682,14 @@ Cada uno de estos se explicará a continuación.
 \chapter*{Conclusion}\label{conclusion}}
 \addcontentsline{toc}{chapter}{Conclusion}
 
+\hypertarget{conclusion-1}{%
+\chapter*{Conclusion}\label{conclusion-1}}
+\addcontentsline{toc}{chapter}{Conclusion}
+
+\hypertarget{conclusion-2}{%
+\chapter*{Conclusion}\label{conclusion-2}}
+\addcontentsline{toc}{chapter}{Conclusion}
+
 \appendix
 
 \hypertarget{the-first-appendix}{%
@@ -584,7 +734,7 @@ This first appendix includes all of the R chunks of code that were hidden throug
 Ali, I., \& Meghanathan, N. (2011). Virtual machines and networks-installation, performance study, advantages and virtualization options. \emph{arXiv Preprint arXiv:1105.0061}.
 
 \leavevmode\hypertarget{ref-Cap1_4_PdP}{}%
-Corp, R. (2011). \emph{R\&M data center handbook}. Reichle \& De-Massari AG.
+Corp, R. (2011). \emph{R\&M data center handbook} (p. 5). Reichle \& De-Massari AG.
 
 \leavevmode\hypertarget{ref-Cap1_2_PdP}{}%
 Delforge, P. (2014). America's data centers are wasting huge amounts of energy. WSP Environment \& Energy, LLC Natural Resources Defense Council. Retrieved from https://www.nrdc.org/sites/default/files/data-center-efficiency-assessment-IB.pdf.
@@ -612,6 +762,9 @@ Kusnetzky, D. (2011). \emph{Virtualization: A manager's guide}. " O'Reilly Media
 
 \leavevmode\hypertarget{ref-Cap3_3_mT}{}%
 Mell, P., Grance, T., \& others. (2011). The nist definition of cloud computing.
+
+\leavevmode\hypertarget{ref-Cap4_Docker}{}%
+Mouat, A. (2015). \emph{Using docker: Developing and deploying software with containers}. " O'Reilly Media, Inc.".
 
 \leavevmode\hypertarget{ref-Cap3_Microservicios}{}%
 Newman, S. (2015). \emph{Building microservices: Designing fine-grained systems}. " O'Reilly Media, Inc.".
@@ -647,7 +800,10 @@ Zou, Y., \& Kontogiannis, K. (2000). Web-based specification and integration of 
 (2017b). \emph{Red Hat Ansible DevOps made simple}. Retrieved from \url{https://www.ansible.com}
 
 \leavevmode\hypertarget{ref-Cap3_9mT}{}%
-(2018). \emph{Chef}. Retrieved from \url{https://www.chef.io/chef/}
+(2018a). \emph{Chef}. Retrieved from \url{https://www.chef.io/chef/}
+
+\leavevmode\hypertarget{ref-Cap4_devstack}{}%
+(2018b). \emph{Devstack}. Retrieved from \url{https://docs.openstack.org/devstack/latest/}
 
 
 % Index?
