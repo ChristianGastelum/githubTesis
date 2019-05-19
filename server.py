@@ -1,31 +1,41 @@
-#!/usr/bin/python
-from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
+# server.py
+import time
+import zmq
 
-PORT_NUMBER = 8080
+HOST = '127.0.0.1'
+PORT = '4444'
 
-#This class will handles any incoming request from
-#the browser 
-class myHandler(BaseHTTPRequestHandler):
-	
-	#Handler for the GET requests
-	def do_GET(self):
-		self.send_response(200)
-		self.send_header('Content-type','text/html')
-		self.end_headers()
-		# Send the html message
-		self.wfile.write("Hello World !")
-		return
+_context = zmq.Context()
+_publisher = _context.socket(zmq.PUB)
+url = 'tcp://{}:{}'.format(HOST, PORT)
 
-try:
-	#Create a web server and define the handler to manage the
-	#incoming request
-	server = HTTPServer(('', PORT_NUMBER), myHandler)
-	print 'Started httpserver on port ' , PORT_NUMBER
-	
-	#Wait forever for incoming htto requests
-	server.serve_forever()
 
-except KeyboardInterrupt:
-	print '^C received, shutting down the web server'
-	server.socket.close()
-	
+def publish_message(message):
+
+    try:
+    _publisher.bind(url)
+    time.sleep(1)
+    _publisher.send(message)
+
+    except Exception as e:
+    print "error {}".format(e)
+
+    finally:
+    _publisher.unbind(url)
+
+
+from flask import Flask
+from flask import request
+app = Flask(__name__)
+
+
+@app.route("/downcase/", methods=['GET'])
+def lowerString():
+
+    _strn = request.args.get('param')
+    response = 'lower case of {} is {}'.format(_strn, _strn.lower())
+    publish_message(response)
+    return response
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=False)	
